@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "mainViewController.h"
+#import "impressionViewController.h"
+#import "foundViewController.h"
+#import "myViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    mainViewController *vc1 = [[mainViewController alloc] init];
+    vc1.title = @"vc1";
+    vc1.view.backgroundColor = [UIColor grayColor];
+    UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+
+    
+    impressionViewController *vc2 = [[impressionViewController alloc] init];
+    vc2.title = @"vc2";
+    vc2.view.backgroundColor = [UIColor redColor];
+    UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+
+    
+    foundViewController *vc3 = [[foundViewController alloc] init];
+    vc3.title = @"vc3";
+    vc3.view.backgroundColor = [UIColor purpleColor];
+    UINavigationController *nc3 = [[UINavigationController alloc] initWithRootViewController:vc3];
+
+    
+    myViewController *vc4 = [[myViewController alloc] init];
+    vc4.title = @"vc4";
+    vc4.view.backgroundColor = [UIColor greenColor];
+    UINavigationController *nc4 = [[UINavigationController alloc] initWithRootViewController:vc4];
+
+    
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    tbc.viewControllers = [NSArray arrayWithObjects:nc1, nc2, nc3, nc4, nil];
+    self.window.rootViewController = tbc;
+    
     return YES;
 }
 
