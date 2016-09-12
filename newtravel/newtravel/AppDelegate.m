@@ -11,6 +11,7 @@
 #import "impressionViewController.h"
 #import "foundViewController.h"
 #import "myViewController.h"
+#import <SMS_SDK/SMSSDK.h>
 @interface AppDelegate ()
 
 @end

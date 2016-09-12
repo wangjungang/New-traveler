@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  newtravel
+//
+//  Created by 王俊钢 on 16/9/12.
+//  Copyright © 2016年 wangjungang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//尺寸
+#define UIScreenWidth [UIScreen mainScreen].bounds.size.width
+#define UIScreenHeight [UIScreen mainScreen].bounds.size.height
+#define UINavigationBarBottom 64
+#define UITranslationBtnMargin UIScreenWidth * 22 / 320
+#define UITranslationBtnSize UIScreenWidth * 42 / 320
+
+
+#endif /* PrefixHeader_pch */
