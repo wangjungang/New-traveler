@@ -12,6 +12,7 @@
 #import "foundViewController.h"
 #import "myViewController.h"
 #import <SMS_SDK/SMSSDK.h>
+#import "WJGTabBarController.H"
 @interface AppDelegate ()
 
 @end
@@ -22,33 +23,37 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     mainViewController *vc1 = [[mainViewController alloc] init];
-    vc1.title = @"vc1";
-    vc1.view.backgroundColor = [UIColor grayColor];
+    vc1.tabBarItem.title = @"首页";
+    [vc1.tabBarItem setImage:[UIImage imageNamed:@"首页"]];
+    vc1.tabBarItem.selectedImage = [UIImage imageNamed:@"首页2"];
     UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:vc1];
 
     
     impressionViewController *vc2 = [[impressionViewController alloc] init];
-    vc2.title = @"vc2";
-    vc2.view.backgroundColor = [UIColor redColor];
+    vc2.title = @"好友";
+    [vc2.tabBarItem setImage:[UIImage imageNamed:@"好友"]];
+    vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"好友管理"];
     UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:vc2];
 
     
     foundViewController *vc3 = [[foundViewController alloc] init];
-    vc3.title = @"vc3";
-    vc3.view.backgroundColor = [UIColor purpleColor];
+    vc3.title = @"朋友圈";
+    [vc3.tabBarItem setImage:[UIImage imageNamed:@"朋友圈"]];
+    vc3.tabBarItem.selectedImage = [UIImage imageNamed:@"朋友圈2"];
     UINavigationController *nc3 = [[UINavigationController alloc] initWithRootViewController:vc3];
 
     
     myViewController *vc4 = [[myViewController alloc] init];
-    vc4.title = @"vc4";
-    vc4.view.backgroundColor = [UIColor greenColor];
+    vc4.title = @"个人中心";
+    [vc4.tabBarItem setImage:[UIImage imageNamed:@"个人中心"]];
+    vc4.tabBarItem.selectedImage = [UIImage imageNamed:@"个人中心2"];
     UINavigationController *nc4 = [[UINavigationController alloc] initWithRootViewController:vc4];
 
     
-    UITabBarController *tbc = [[UITabBarController alloc] init];
+    WJGTabBarController *tbc = [[WJGTabBarController alloc] init];
     tbc.viewControllers = [NSArray arrayWithObjects:nc1, nc2, nc3, nc4, nil];
     self.window.rootViewController = tbc;
-    
+    tbc.tabBar.tintColor = [UIColor colorWithRed:255.0/255.0 green:124.0/255.0 blue:56.0/255.0 alpha:1];
     return YES;
 }
 

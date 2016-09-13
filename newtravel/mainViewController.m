@@ -7,9 +7,16 @@
 //
 
 #import "mainViewController.h"
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
 
-@interface mainViewController ()
-
+@interface mainViewController ()<UISearchBarDelegate>
+@property (nonatomic,strong) UIImageView *backimageView;
+@property (nonatomic,strong) UIButton *qrcodeBtn;
+@property (nonatomic,strong) UIButton *addressBtn;
+@property (nonatomic,strong) UISearchBar *searchBar;
+@property (nonatomic,strong) NSString *addressStr;
 @end
 
 @implementation mainViewController
@@ -17,6 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.backimageView];
+    [self.view addSubview:self.qrcodeBtn];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"晶格状态栏背景"] forBarMetrics:0];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"扫描"] style:UIBarButtonItemStylePlain target:self action:@selector(nextpus)];
+    [self.navigationController.view addSubview:self.searchBar];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"address"style:UIBarButtonItemStylePlain target:self action:@selector(leftpusClick)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +41,50 @@
 - (void) viewDidDisappear:(BOOL)animated
 {
     self.hidesBottomBarWhenPushed = NO;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.backimageView.frame = CGRectMake(0, 0, UIScreenWidth, UIScreenHeight);
+    self.searchBar.frame = CGRectMake(UIScreenWidth/3, 24, UIScreenWidth/2, 30);
+}
+
+#pragma mark - getters
+
+-(UIImageView *)backimageView
+{
+    if(!_backimageView)
+    {
+        _backimageView = [[UIImageView alloc] init];
+        _backimageView.image = [UIImage imageNamed:@"背景图片4"];
+        
+    }
+    return _backimageView;
+}
+
+-(UISearchBar *)searchBar
+{
+    if(!_searchBar)
+    {
+        _searchBar = [[UISearchBar alloc] init];
+        _searchBar.delegate = self;
+        _searchBar.backgroundImage = [UIImage imageNamed:@"搜索框"];
+        
+    }
+    return _searchBar;
+}
+
+#pragma mark - 实现方法
+
+-(void)nextpus
+{
+    
+}
+
+-(void)leftpusClick
+{
+
 }
 
 @end
