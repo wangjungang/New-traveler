@@ -69,6 +69,7 @@
 		538E2DBF1D87A53800FC55AF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2DB71D87A53800FC55AF /* MBProgressHUD.m */; };
 		538E2DC11D87A55400FC55AF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 538E2DC01D87A55400FC55AF /* libsqlite3.0.tbd */; };
 		538E2DC81D87FC5000FC55AF /* friendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2DC71D87FC5000FC55AF /* friendViewController.m */; };
+		538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2DCA1D88072200FC55AF /* tripimageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,8 @@
 		538E2DC01D87A55400FC55AF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		538E2DC61D87FC5000FC55AF /* friendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friendViewController.h; sourceTree = "<group>"; };
 		538E2DC71D87FC5000FC55AF /* friendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendViewController.m; sourceTree = "<group>"; };
+		538E2DC91D88072200FC55AF /* tripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripimageView.h; sourceTree = "<group>"; };
+		538E2DCA1D88072200FC55AF /* tripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripimageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +316,8 @@
 		530B97CE1D80661A0074454C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				538E2DC91D88072200FC55AF /* tripimageView.h */,
+				538E2DCA1D88072200FC55AF /* tripimageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -701,6 +706,7 @@
 				538E2D911D87A4F900FC55AF /* MASViewConstraint.m in Sources */,
 				530B97D21D806BD10074454C /* mainViewController.m in Sources */,
 				538E2D4C1D87A4B300FC55AF /* AFSecurityPolicy.m in Sources */,
+				538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */,
 				538E2D8F1D87A4F900FC55AF /* MASLayoutConstraint.m in Sources */,
 				538E2D9E1D87A4F900FC55AF /* SDWebImagePrefetcher.m in Sources */,
 				538E2D961D87A4F900FC55AF /* MKAnnotationView+WebCache.m in Sources */,
