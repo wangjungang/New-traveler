@@ -10,13 +10,14 @@
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
-
+#import "tripimageView.h"
 @interface mainViewController ()<UISearchBarDelegate>
 @property (nonatomic,strong) UIImageView *backimageView;
 @property (nonatomic,strong) UIButton *qrcodeBtn;
 @property (nonatomic,strong) UIButton *addressBtn;
 @property (nonatomic,strong) UISearchBar *searchBar;
 @property (nonatomic,strong) NSString *addressStr;
+@property (nonatomic,strong) tripimageView *trimView;
 @end
 
 @implementation mainViewController
@@ -31,6 +32,8 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"扫描"] style:UIBarButtonItemStylePlain target:self action:@selector(nextpus)];
     [self.navigationController.view addSubview:self.searchBar];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"address"style:UIBarButtonItemStylePlain target:self action:@selector(leftpusClick)];
+    
+    [self.view addSubview:self.trimView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +51,8 @@
     [super viewWillAppear:animated];
     self.backimageView.frame = CGRectMake(0, 0, UIScreenWidth, UIScreenHeight);
     self.searchBar.frame = CGRectMake(UIScreenWidth/3, 24, UIScreenWidth/2, 30);
+    self.trimView.frame = CGRectMake(UIScreenWidth/6, 180, UIScreenWidth/3.5, UIScreenWidth/3.5);
+    
 }
 
 #pragma mark - getters
@@ -74,6 +79,18 @@
     }
     return _searchBar;
 }
+
+
+-(tripimageView *)trimView
+{
+    if(!_trimView)
+    {
+        _trimView = [[tripimageView alloc] init];
+        _trimView.image = [UIImage imageNamed:@"旅行行程底纹"];
+    }
+    return _trimView;
+}
+
 
 #pragma mark - 实现方法
 

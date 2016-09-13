@@ -10,5 +10,5 @@
 
 @interface tripimageView : UIImageView
 @property (nonatomic,strong) UILabel *namelabel;
-@property (nonatomic,strong) UIImageView *teplabel;
+@property (nonatomic,strong) UIImageView *setimageView;
 @end
