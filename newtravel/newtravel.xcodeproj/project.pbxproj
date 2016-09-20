@@ -35,6 +35,8 @@
 		5358F33B1D870251003213C0 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F3391D870251003213C0 /* SMS_SDK.framework */; };
 		5358F33D1D870271003213C0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F33C1D870271003213C0 /* AddressBook.framework */; };
 		5358F33F1D870276003213C0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F33E1D870276003213C0 /* AddressBookUI.framework */; };
+		535E42671D91523700570A07 /* addtripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E42661D91523700570A07 /* addtripimageView.m */; };
+		535E426A1D91524900570A07 /* writetripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E42691D91524900570A07 /* writetripimageView.m */; };
 		538E2D3B1D87A01300FC55AF /* WJGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2D3A1D87A01300FC55AF /* WJGTabBarController.m */; };
 		538E2D4A1D87A4B300FC55AF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2D3E1D87A4B300FC55AF /* AFHTTPSessionManager.m */; };
 		538E2D4B1D87A4B300FC55AF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2D411D87A4B300FC55AF /* AFNetworkReachabilityManager.m */; };
@@ -125,6 +127,10 @@
 		5358F33C1D870271003213C0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		5358F33E1D870276003213C0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		5358F3411D870565003213C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		535E42651D91523700570A07 /* addtripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addtripimageView.h; sourceTree = "<group>"; };
+		535E42661D91523700570A07 /* addtripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addtripimageView.m; sourceTree = "<group>"; };
+		535E42681D91524900570A07 /* writetripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writetripimageView.h; sourceTree = "<group>"; };
+		535E42691D91524900570A07 /* writetripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = writetripimageView.m; sourceTree = "<group>"; };
 		538E2D391D87A01300FC55AF /* WJGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJGTabBarController.h; sourceTree = "<group>"; };
 		538E2D3A1D87A01300FC55AF /* WJGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJGTabBarController.m; sourceTree = "<group>"; };
 		538E2D3D1D87A4B300FC55AF /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -678,6 +684,10 @@
 		53970ADE1D910A2A004857B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				535E42651D91523700570A07 /* addtripimageView.h */,
+				535E42661D91523700570A07 /* addtripimageView.m */,
+				535E42681D91524900570A07 /* writetripimageView.h */,
+				535E42691D91524900570A07 /* writetripimageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -817,6 +827,7 @@
 				538E2D941D87A4F900FC55AF /* View+MASAdditions.m in Sources */,
 				53970AD81D90C967004857B7 /* managementimageView.m in Sources */,
 				538E2DA41D87A4F900FC55AF /* UIImageView+WebCache.m in Sources */,
+				535E426A1D91524900570A07 /* writetripimageView.m in Sources */,
 				538E2DA21D87A4F900FC55AF /* UIImage+WebP.m in Sources */,
 				538E2D981D87A4F900FC55AF /* SDImageCache.m in Sources */,
 				530B97E71D806CDC0074454C /* myViewController.m in Sources */,
@@ -830,6 +841,7 @@
 				538E2D931D87A4F900FC55AF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				538E2DBD1D87A53800FC55AF /* MBProgressHUD+XMG.m in Sources */,
 				538E2D4A1D87A4B300FC55AF /* AFHTTPSessionManager.m in Sources */,
+				535E42671D91523700570A07 /* addtripimageView.m in Sources */,
 				530B97BB1D8060110074454C /* ViewController.m in Sources */,
 				538E2D971D87A4F900FC55AF /* NSData+ImageContentType.m in Sources */,
 				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,

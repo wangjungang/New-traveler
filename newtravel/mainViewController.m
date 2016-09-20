@@ -16,10 +16,17 @@
 #import "managementimageView.h"
 #import "moretripViewController.h"
 #import "travelitViewController.h"
+
 static NSString *kcellname = @"name1";
-@interface mainViewController ()<UITextFieldDelegate>
+@interface mainViewController ()<UITextFieldDelegate,UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
 {
     BOOL isequal;
+    
+    UIPageControl *pageControl; //指示当前处于第几个引导页
+    UIScrollView *scrollView; //用于存放并显示引导页
+    UIImageView *imageViewOne;
+    UIImageView *imageViewTwo;
+    UIImageView *imageViewThree;
 }
 @property (nonatomic,strong) UIImageView *backimageView;
 @property (nonatomic,strong) UIButton *qrcodeBtn;
@@ -32,6 +39,8 @@ static NSString *kcellname = @"name1";
 @property (nonatomic,strong) UITextField *searchtext;
 @property (nonatomic,strong) UITableView *addresstableView;
 @property (nonatomic,strong) NSMutableArray *addressarr;
+
+
 @end
 
 @implementation mainViewController
@@ -40,6 +49,7 @@ static NSString *kcellname = @"name1";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+ 
     isequal = YES;
     self.addressarr = [NSMutableArray arrayWithObjects:@"北京",@"上海",@"广州",@"深圳",@"天津",@"杭州",@"南京",@"重庆",@"西安", nil];
     [self.view addSubview:self.backimageView];
@@ -60,9 +70,12 @@ static NSString *kcellname = @"name1";
     [self.view addSubview:self.navView];
     [self.view addSubview:self.manageView];
     [self.view addSubview:self.addbtn];
-    [self.view addSubview:self.addresstableView];
     
     [self leftpop];
+    [self.view addSubview:self.addresstableView];
+    
+    
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,7 +126,8 @@ static NSString *kcellname = @"name1";
         make.bottom.equalTo(self.view).with.offset(-94);
         make.size.mas_equalTo(CGSizeMake(60, 60));
     }];
-    self.addresstableView.frame = CGRectMake(20, 64-150, 60, 150);
+   // self.addresstableView.frame = CGRectMake(20, 64-150, 60, 150);
+    self.addresstableView.frame = CGRectMake(0, 0-250, UIScreenWidth, 250);
 }
 
 #pragma mark - getters
@@ -227,11 +241,11 @@ static NSString *kcellname = @"name1";
 
 -(void)leftpusClick
 {
-    
     if (isequal==YES) {
         [UIView animateWithDuration:0.3 animations:^{
-            self.addresstableView.transform = CGAffineTransformMakeTranslation(0, 150);
+            self.addresstableView.transform = CGAffineTransformMakeTranslation(0, 250+64);
             isequal = !isequal;
+            [self.view bringSubviewToFront:self.addresstableView];
         }completion:^(BOOL finished) {
             
         }];
@@ -277,8 +291,15 @@ static NSString *kcellname = @"name1";
 {
     NSLog(@"点击加号");
     moretripViewController *moreVC = [[moretripViewController alloc] init];
-    [self presentViewController:moreVC animated:YES completion:nil];
- 
+    
+    //moreVC.view.backgroundColor=[UIColor colorWithWhite:0 alpha:0.4];
+    
+    moreVC.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"背景"]];
+    moreVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
+
+    [self presentViewController:moreVC animated:YES completion:^{
+       // moreVC.view.superview.backgroundColor = [UIColor clearColor];
+    }];
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -312,7 +333,7 @@ static NSString *kcellname = @"name1";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 30.0f;
+    return 50.0f;
 }
 
 //点击cell方法
@@ -321,6 +342,7 @@ static NSString *kcellname = @"name1";
 {
     NSLog(@"点击了cell");
 }
+
 //滑动pop
 -(void)leftpop
 {
@@ -336,4 +358,6 @@ static NSString *kcellname = @"name1";
     }
     
 }
+
+
 @end
