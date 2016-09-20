@@ -11,13 +11,27 @@
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
 #import "tripimageView.h"
-@interface mainViewController ()<UISearchBarDelegate>
+#import "pictripimageView.h"
+#import "navigationimageView.h"
+#import "managementimageView.h"
+#import "moretripViewController.h"
+#import "travelitViewController.h"
+static NSString *kcellname = @"name1";
+@interface mainViewController ()<UITextFieldDelegate>
+{
+    BOOL isequal;
+}
 @property (nonatomic,strong) UIImageView *backimageView;
 @property (nonatomic,strong) UIButton *qrcodeBtn;
-@property (nonatomic,strong) UIButton *addressBtn;
-@property (nonatomic,strong) UISearchBar *searchBar;
+@property (nonatomic,strong) UIButton *addbtn;
 @property (nonatomic,strong) NSString *addressStr;
 @property (nonatomic,strong) tripimageView *trimView;
+@property (nonatomic,strong) pictripimageView *picView;
+@property (nonatomic,strong) navigationimageView *navView;
+@property (nonatomic,strong) managementimageView *manageView;
+@property (nonatomic,strong) UITextField *searchtext;
+@property (nonatomic,strong) UITableView *addresstableView;
+@property (nonatomic,strong) NSMutableArray *addressarr;
 @end
 
 @implementation mainViewController
@@ -26,14 +40,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    isequal = YES;
+    self.addressarr = [NSMutableArray arrayWithObjects:@"北京",@"上海",@"广州",@"深圳",@"天津",@"杭州",@"南京",@"重庆",@"西安", nil];
     [self.view addSubview:self.backimageView];
     [self.view addSubview:self.qrcodeBtn];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"晶格状态栏背景"] forBarMetrics:0];
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"扫描"] style:UIBarButtonItemStylePlain target:self action:@selector(nextpus)];
-    [self.navigationController.view addSubview:self.searchBar];
+    
+    [self.navigationItem setTitleView:self.searchtext];
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"address"style:UIBarButtonItemStylePlain target:self action:@selector(leftpusClick)];
     
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonpress5)];
+    [self.view addGestureRecognizer:singleTap1];
+    
     [self.view addSubview:self.trimView];
+    [self.view addSubview:self.picView];
+    [self.view addSubview:self.navView];
+    [self.view addSubview:self.manageView];
+    [self.view addSubview:self.addbtn];
+    [self.view addSubview:self.addresstableView];
+    
+    [self leftpop];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,9 +79,41 @@
 {
     [super viewWillAppear:animated];
     self.backimageView.frame = CGRectMake(0, 0, UIScreenWidth, UIScreenHeight);
-    self.searchBar.frame = CGRectMake(UIScreenWidth/3, 24, UIScreenWidth/2, 30);
-    self.trimView.frame = CGRectMake(UIScreenWidth/6, 180, UIScreenWidth/3.5, UIScreenWidth/3.5);
+    self.searchtext.frame = CGRectMake(UIScreenWidth/3, 26, UIScreenWidth/2, 30);
     
+    [self.trimView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(UIScreenWidth/3.5, UIScreenWidth/3.5));
+        make.top.equalTo(self.view).with.offset(180);
+        make.left.equalTo(self.view).with.offset(UIScreenWidth/6);
+        
+    }];
+    
+    [self.picView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.trimView).with.offset(10+UIScreenWidth/3.5);
+        make.bottom.equalTo(self.trimView).with.offset(0);
+        make.size.mas_equalTo(CGSizeMake(UIScreenWidth/2.8, UIScreenWidth/2.8));
+        
+    }];
+    
+    [self.navView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.trimView).with.offset(UIScreenWidth/3.5+10);
+        make.right.equalTo(self.trimView).with.offset(0);
+        make.size.mas_equalTo(CGSizeMake(UIScreenWidth/3, UIScreenWidth/3));
+
+    }];
+    
+    [self.manageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.trimView).with.offset(UIScreenWidth/3.5);
+        make.left.equalTo(self.trimView).with.offset(10+UIScreenWidth/3.5);
+        make.size.mas_equalTo(CGSizeMake(UIScreenWidth/3.8, UIScreenWidth/3.8));
+
+    }];
+    [self.addbtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).with.offset(45);
+        make.bottom.equalTo(self.view).with.offset(-94);
+        make.size.mas_equalTo(CGSizeMake(60, 60));
+    }];
+    self.addresstableView.frame = CGRectMake(20, 64-150, 60, 150);
 }
 
 #pragma mark - getters
@@ -68,18 +129,17 @@
     return _backimageView;
 }
 
--(UISearchBar *)searchBar
+-(UITextField *)searchtext
 {
-    if(!_searchBar)
+    if(!_searchtext)
     {
-        _searchBar = [[UISearchBar alloc] init];
-        _searchBar.delegate = self;
-        _searchBar.backgroundImage = [UIImage imageNamed:@"搜索框"];
-        
+        _searchtext = [[UITextField alloc] init];
+        _searchtext.delegate = self;
+        _searchtext.backgroundColor = [UIColor whiteColor];
+        _searchtext.placeholder = @"请输入地址";
     }
-    return _searchBar;
+    return _searchtext;
 }
-
 
 -(tripimageView *)trimView
 {
@@ -87,10 +147,76 @@
     {
         _trimView = [[tripimageView alloc] init];
         _trimView.image = [UIImage imageNamed:@"旅行行程底纹"];
+        
+        _trimView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonpress1)];
+        [_trimView addGestureRecognizer:singleTap1];
     }
     return _trimView;
 }
 
+-(pictripimageView *)picView
+{
+    if(!_picView)
+    {
+        _picView = [[pictripimageView alloc] init];
+        _picView.image = [UIImage imageNamed:@"图集底纹"];
+        _picView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonpress2)];
+        [_picView addGestureRecognizer:singleTap1];
+    }
+    return _picView;
+}
+
+-(navigationimageView *)navView
+{
+    if(!_navView)
+    {
+        _navView = [[navigationimageView alloc] init];
+        _navView.image = [UIImage imageNamed:@"行程导航底纹"];
+        _navView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonpress3)];
+        [_navView addGestureRecognizer:singleTap1];
+    }
+    return _navView;
+}
+
+-(managementimageView *)manageView
+{
+    if(!_manageView)
+    {
+        _manageView = [[managementimageView alloc] init];
+        _manageView.image = [UIImage imageNamed:@"行程管理底纹"];
+        _manageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonpress4)];
+        [_manageView addGestureRecognizer:singleTap1];
+    }
+    return _manageView;
+}
+
+-(UIButton *)addbtn
+{
+    if(!_addbtn)
+    {
+        _addbtn = [[UIButton alloc] init];
+        [_addbtn setImage:[UIImage imageNamed:@"加号"] forState:UIControlStateNormal];
+        [_addbtn addTarget:self action:@selector(addbtnclick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addbtn;
+}
+
+-(UITableView *)addresstableView
+{
+    if(!_addresstableView)
+    {
+        _addresstableView = [[UITableView alloc] init];
+        _addresstableView.dataSource = self;
+        _addresstableView.delegate = self;
+        //_addresstableView.backgroundColor = [UIColor redColor];
+        
+    }
+    return _addresstableView;
+}
 
 #pragma mark - 实现方法
 
@@ -101,7 +227,113 @@
 
 -(void)leftpusClick
 {
-
+    
+    if (isequal==YES) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.addresstableView.transform = CGAffineTransformMakeTranslation(0, 150);
+            isequal = !isequal;
+        }completion:^(BOOL finished) {
+            
+        }];
+    }else
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.addresstableView.transform = CGAffineTransformIdentity;
+            isequal = !isequal;
+        }completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
+-(void)buttonpress1
+{
+    NSLog(@"旅行行程");
+    travelitViewController *traviVC = [[travelitViewController alloc] init];
+    [self.navigationController pushViewController:traviVC animated:YES];
+}
+
+-(void)buttonpress2
+{
+    NSLog(@"行程图集");
+}
+
+-(void)buttonpress3
+{
+    NSLog(@"行程导航");
+}
+
+-(void)buttonpress4
+{
+    NSLog(@"行程管理");
+}
+
+-(void)buttonpress5
+{
+    [self.searchtext resignFirstResponder];
+}
+
+-(void)addbtnclick
+{
+    NSLog(@"点击加号");
+    moretripViewController *moreVC = [[moretripViewController alloc] init];
+    [self presentViewController:moreVC animated:YES completion:nil];
+ 
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.addressarr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell=nil;
+    cell=[tableView dequeueReusableCellWithIdentifier:kcellname];
+    //如果重用队列中没有重用的对象，那么就创建一个新的cell
+    if(cell==nil)
+    {
+        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kcellname];
+    }
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = self.addressarr[indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
+    return cell;
+}
+
+//设置cell的高度
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 30.0f;
+}
+
+//点击cell方法
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"点击了cell");
+}
+//滑动pop
+-(void)leftpop
+{
+    self.navigationController.interactivePopGestureRecognizer.delegate  = (id)self;
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+        SEL selector = NSSelectorFromString(@"setOrientation:");
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:[UIDevice currentDevice]];
+        int val = UIInterfaceOrientationPortrait;
+        [invocation setArgument:&val atIndex:2];
+        [invocation invoke];
+    }
+    
+}
 @end

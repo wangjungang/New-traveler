@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530A0F201D885E78004C28FA /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F191D885E78004C28FA /* BaiduMapAPI_Base.framework */; };
+		530A0F211D885E78004C28FA /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F1A1D885E78004C28FA /* BaiduMapAPI_Cloud.framework */; };
+		530A0F221D885E78004C28FA /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F1B1D885E78004C28FA /* BaiduMapAPI_Location.framework */; };
+		530A0F231D885E78004C28FA /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F1C1D885E78004C28FA /* BaiduMapAPI_Map.framework */; };
+		530A0F241D885E78004C28FA /* BaiduMapAPI_Radar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F1D1D885E78004C28FA /* BaiduMapAPI_Radar.framework */; };
+		530A0F251D885E78004C28FA /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F1E1D885E78004C28FA /* BaiduMapAPI_Search.framework */; };
+		530A0F261D885E78004C28FA /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A0F1F1D885E78004C28FA /* BaiduMapAPI_Utils.framework */; };
 		530B97B51D8060110074454C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97B41D8060110074454C /* main.m */; };
-		530B97B81D8060110074454C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97B71D8060110074454C /* AppDelegate.m */; };
+		530B97B81D8060110074454C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 530B97B71D8060110074454C /* AppDelegate.mm */; };
 		530B97BB1D8060110074454C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97BA1D8060110074454C /* ViewController.m */; };
 		530B97BE1D8060110074454C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530B97BC1D8060110074454C /* Main.storyboard */; };
 		530B97C01D8060110074454C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530B97BF1D8060110074454C /* Assets.xcassets */; };
@@ -17,6 +24,8 @@
 		530B97D91D806C640074454C /* impressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97D81D806C640074454C /* impressionViewController.m */; };
 		530B97E01D806CA60074454C /* foundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97DF1D806CA60074454C /* foundViewController.m */; };
 		530B97E71D806CDC0074454C /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97E61D806CDC0074454C /* myViewController.m */; };
+		5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310FB091D8FC7ED00F855FE /* pictripimageView.m */; };
+		5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310FB0C1D8FD5AF00F855FE /* navigationimageView.m */; };
 		5358F32E1D870200003213C0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F32D1D870200003213C0 /* libz.tbd */; };
 		5358F3301D870211003213C0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F32F1D870211003213C0 /* libicucore.tbd */; };
 		5358F3321D870220003213C0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F3311D870220003213C0 /* MessageUI.framework */; };
@@ -70,13 +79,24 @@
 		538E2DC11D87A55400FC55AF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 538E2DC01D87A55400FC55AF /* libsqlite3.0.tbd */; };
 		538E2DC81D87FC5000FC55AF /* friendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2DC71D87FC5000FC55AF /* friendViewController.m */; };
 		538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2DCA1D88072200FC55AF /* tripimageView.m */; };
+		53970AD81D90C967004857B7 /* managementimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AD71D90C967004857B7 /* managementimageView.m */; };
+		53970AE21D910A63004857B7 /* moretripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AE11D910A63004857B7 /* moretripViewController.m */; };
+		53970AE51D910FC9004857B7 /* tableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AE41D910FC9004857B7 /* tableView.m */; };
+		53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AEB1D911B47004857B7 /* travelitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530A0F191D885E78004C28FA /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		530A0F1A1D885E78004C28FA /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
+		530A0F1B1D885E78004C28FA /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
+		530A0F1C1D885E78004C28FA /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		530A0F1D1D885E78004C28FA /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
+		530A0F1E1D885E78004C28FA /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		530A0F1F1D885E78004C28FA /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		530B97B01D8060110074454C /* newtravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newtravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530B97B41D8060110074454C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		530B97B61D8060110074454C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = newtravel/AppDelegate.h; sourceTree = "<group>"; };
-		530B97B71D8060110074454C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = newtravel/AppDelegate.m; sourceTree = "<group>"; };
+		530B97B71D8060110074454C /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = newtravel/AppDelegate.mm; sourceTree = "<group>"; };
 		530B97B91D8060110074454C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = newtravel/ViewController.h; sourceTree = "<group>"; };
 		530B97BA1D8060110074454C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = newtravel/ViewController.m; sourceTree = "<group>"; };
 		530B97BD1D8060110074454C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +111,10 @@
 		530B97DF1D806CA60074454C /* foundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foundViewController.m; sourceTree = "<group>"; };
 		530B97E51D806CDC0074454C /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		530B97E61D806CDC0074454C /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
+		5310FB081D8FC7ED00F855FE /* pictripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pictripimageView.h; sourceTree = "<group>"; };
+		5310FB091D8FC7ED00F855FE /* pictripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pictripimageView.m; sourceTree = "<group>"; };
+		5310FB0B1D8FD5AF00F855FE /* navigationimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navigationimageView.h; sourceTree = "<group>"; };
+		5310FB0C1D8FD5AF00F855FE /* navigationimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navigationimageView.m; sourceTree = "<group>"; };
 		5358F32D1D870200003213C0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5358F32F1D870211003213C0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		5358F3311D870220003213C0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -195,6 +219,14 @@
 		538E2DC71D87FC5000FC55AF /* friendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendViewController.m; sourceTree = "<group>"; };
 		538E2DC91D88072200FC55AF /* tripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripimageView.h; sourceTree = "<group>"; };
 		538E2DCA1D88072200FC55AF /* tripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripimageView.m; sourceTree = "<group>"; };
+		53970AD61D90C967004857B7 /* managementimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = managementimageView.h; sourceTree = "<group>"; };
+		53970AD71D90C967004857B7 /* managementimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = managementimageView.m; sourceTree = "<group>"; };
+		53970AE01D910A63004857B7 /* moretripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moretripViewController.h; sourceTree = "<group>"; };
+		53970AE11D910A63004857B7 /* moretripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moretripViewController.m; sourceTree = "<group>"; };
+		53970AE31D910FC9004857B7 /* tableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableView.h; sourceTree = "<group>"; };
+		53970AE41D910FC9004857B7 /* tableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableView.m; sourceTree = "<group>"; };
+		53970AEA1D911B47004857B7 /* travelitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = travelitViewController.h; sourceTree = "<group>"; };
+		53970AEB1D911B47004857B7 /* travelitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = travelitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,11 +235,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				538E2DC11D87A55400FC55AF /* libsqlite3.0.tbd in Frameworks */,
+				530A0F231D885E78004C28FA /* BaiduMapAPI_Map.framework in Frameworks */,
+				530A0F261D885E78004C28FA /* BaiduMapAPI_Utils.framework in Frameworks */,
 				5358F33F1D870276003213C0 /* AddressBookUI.framework in Frameworks */,
+				530A0F211D885E78004C28FA /* BaiduMapAPI_Cloud.framework in Frameworks */,
+				530A0F221D885E78004C28FA /* BaiduMapAPI_Location.framework in Frameworks */,
 				5358F33D1D870271003213C0 /* AddressBook.framework in Frameworks */,
 				5358F33A1D870251003213C0 /* MOBFoundation.framework in Frameworks */,
+				530A0F241D885E78004C28FA /* BaiduMapAPI_Radar.framework in Frameworks */,
 				5358F3361D87023C003213C0 /* libstdc++.tbd in Frameworks */,
 				5358F3341D87022F003213C0 /* JavaScriptCore.framework in Frameworks */,
+				530A0F251D885E78004C28FA /* BaiduMapAPI_Search.framework in Frameworks */,
+				530A0F201D885E78004C28FA /* BaiduMapAPI_Base.framework in Frameworks */,
 				5358F3321D870220003213C0 /* MessageUI.framework in Frameworks */,
 				5358F33B1D870251003213C0 /* SMS_SDK.framework in Frameworks */,
 				5358F3301D870211003213C0 /* libicucore.tbd in Frameworks */,
@@ -218,11 +257,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530A0F181D885E78004C28FA /* baidumap */ = {
+			isa = PBXGroup;
+			children = (
+				530A0F191D885E78004C28FA /* BaiduMapAPI_Base.framework */,
+				530A0F1A1D885E78004C28FA /* BaiduMapAPI_Cloud.framework */,
+				530A0F1B1D885E78004C28FA /* BaiduMapAPI_Location.framework */,
+				530A0F1C1D885E78004C28FA /* BaiduMapAPI_Map.framework */,
+				530A0F1D1D885E78004C28FA /* BaiduMapAPI_Radar.framework */,
+				530A0F1E1D885E78004C28FA /* BaiduMapAPI_Search.framework */,
+				530A0F1F1D885E78004C28FA /* BaiduMapAPI_Utils.framework */,
+			);
+			path = baidumap;
+			sourceTree = "<group>";
+		};
 		530B97A71D8060110074454C = {
 			isa = PBXGroup;
 			children = (
 				530B97CB1D8065BD0074454C /* Other */,
 				530B97CC1D8065DA0074454C /* Main首页 */,
+				53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */,
+				53970ADC1D910A0F004857B7 /* moretrip更多行程 */,
 				538E2DC21D87FC1800FC55AF /* Friend好友 */,
 				530B97D31D806C2D0074454C /* impression印象 */,
 				530B97DA1D806C7B0074454C /* found发现 */,
@@ -261,6 +316,7 @@
 		530B97CA1D8065B50074454C /* Framworks */ = {
 			isa = PBXGroup;
 			children = (
+				530A0F181D885E78004C28FA /* baidumap */,
 				538E2DA61D87A53800FC55AF /* fmdb */,
 				538E2DB21D87A53800FC55AF /* MBProgressHUD */,
 				538E2D501D87A4F900FC55AF /* Masonry */,
@@ -283,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				530B97B61D8060110074454C /* AppDelegate.h */,
-				530B97B71D8060110074454C /* AppDelegate.m */,
+				530B97B71D8060110074454C /* AppDelegate.mm */,
 				530B97B91D8060110074454C /* ViewController.h */,
 				530B97BA1D8060110074454C /* ViewController.m */,
 				530B97BC1D8060110074454C /* Main.storyboard */,
@@ -318,6 +374,14 @@
 			children = (
 				538E2DC91D88072200FC55AF /* tripimageView.h */,
 				538E2DCA1D88072200FC55AF /* tripimageView.m */,
+				5310FB081D8FC7ED00F855FE /* pictripimageView.h */,
+				5310FB091D8FC7ED00F855FE /* pictripimageView.m */,
+				5310FB0B1D8FD5AF00F855FE /* navigationimageView.h */,
+				5310FB0C1D8FD5AF00F855FE /* navigationimageView.m */,
+				53970AD61D90C967004857B7 /* managementimageView.h */,
+				53970AD71D90C967004857B7 /* managementimageView.m */,
+				53970AE31D910FC9004857B7 /* tableView.h */,
+				53970AE41D910FC9004857B7 /* tableView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -594,6 +658,72 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		53970ADC1D910A0F004857B7 /* moretrip更多行程 */ = {
+			isa = PBXGroup;
+			children = (
+				53970ADF1D910A2D004857B7 /* Controller */,
+				53970ADE1D910A2A004857B7 /* View */,
+				53970ADD1D910A25004857B7 /* Model */,
+			);
+			name = "moretrip更多行程";
+			sourceTree = "<group>";
+		};
+		53970ADD1D910A25004857B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53970ADE1D910A2A004857B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53970ADF1D910A2D004857B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53970AE01D910A63004857B7 /* moretripViewController.h */,
+				53970AE11D910A63004857B7 /* moretripViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */ = {
+			isa = PBXGroup;
+			children = (
+				53970AE91D911B31004857B7 /* Controller */,
+				53970AE81D911B2D004857B7 /* View */,
+				53970AE71D911B28004857B7 /* Model */,
+			);
+			name = "Travelitinerary旅行行程";
+			sourceTree = "<group>";
+		};
+		53970AE71D911B28004857B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53970AE81D911B2D004857B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53970AE91D911B31004857B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53970AEA1D911B47004857B7 /* travelitViewController.h */,
+				53970AEB1D911B47004857B7 /* travelitViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -620,7 +750,7 @@
 		530B97A81D8060110074454C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = wangjungang;
 				TargetAttributes = {
 					530B97AF1D8060110074454C = {
@@ -677,6 +807,7 @@
 				538E2D9B1D87A4F900FC55AF /* SDWebImageDownloader.m in Sources */,
 				538E2DBA1D87A53800FC55AF /* FMDatabasePool.m in Sources */,
 				538E2D4B1D87A4B300FC55AF /* AFNetworkReachabilityManager.m in Sources */,
+				53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */,
 				538E2D991D87A4F900FC55AF /* SDWebImageCompat.m in Sources */,
 				538E2D4F1D87A4B300FC55AF /* AFURLSessionManager.m in Sources */,
 				538E2D8C1D87A4F900FC55AF /* MASCompositeConstraint.m in Sources */,
@@ -684,6 +815,7 @@
 				538E2DA51D87A4F900FC55AF /* UIView+WebCacheOperation.m in Sources */,
 				538E2D8E1D87A4F900FC55AF /* MASConstraintMaker.m in Sources */,
 				538E2D941D87A4F900FC55AF /* View+MASAdditions.m in Sources */,
+				53970AD81D90C967004857B7 /* managementimageView.m in Sources */,
 				538E2DA41D87A4F900FC55AF /* UIImageView+WebCache.m in Sources */,
 				538E2DA21D87A4F900FC55AF /* UIImage+WebP.m in Sources */,
 				538E2D981D87A4F900FC55AF /* SDImageCache.m in Sources */,
@@ -691,6 +823,7 @@
 				538E2DA11D87A4F900FC55AF /* UIImage+MultiFormat.m in Sources */,
 				538E2D9C1D87A4F900FC55AF /* SDWebImageDownloaderOperation.m in Sources */,
 				538E2D901D87A4F900FC55AF /* MASViewAttribute.m in Sources */,
+				53970AE51D910FC9004857B7 /* tableView.m in Sources */,
 				538E2DBC1D87A53800FC55AF /* FMResultSet.m in Sources */,
 				538E2DA31D87A4F900FC55AF /* UIImageView+HighlightedWebCache.m in Sources */,
 				538E2D4E1D87A4B300FC55AF /* AFURLResponseSerialization.m in Sources */,
@@ -699,18 +832,21 @@
 				538E2D4A1D87A4B300FC55AF /* AFHTTPSessionManager.m in Sources */,
 				530B97BB1D8060110074454C /* ViewController.m in Sources */,
 				538E2D971D87A4F900FC55AF /* NSData+ImageContentType.m in Sources */,
-				530B97B81D8060110074454C /* AppDelegate.m in Sources */,
+				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,
 				538E2D921D87A4F900FC55AF /* NSArray+MASAdditions.m in Sources */,
 				530B97B51D8060110074454C /* main.m in Sources */,
 				538E2D9A1D87A4F900FC55AF /* SDWebImageDecoder.m in Sources */,
 				538E2D911D87A4F900FC55AF /* MASViewConstraint.m in Sources */,
 				530B97D21D806BD10074454C /* mainViewController.m in Sources */,
+				5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */,
 				538E2D4C1D87A4B300FC55AF /* AFSecurityPolicy.m in Sources */,
+				53970AE21D910A63004857B7 /* moretripViewController.m in Sources */,
 				538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */,
 				538E2D8F1D87A4F900FC55AF /* MASLayoutConstraint.m in Sources */,
 				538E2D9E1D87A4F900FC55AF /* SDWebImagePrefetcher.m in Sources */,
 				538E2D961D87A4F900FC55AF /* MKAnnotationView+WebCache.m in Sources */,
 				538E2DA01D87A4F900FC55AF /* UIImage+GIF.m in Sources */,
+				5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */,
 				538E2DBB1D87A53800FC55AF /* FMDatabaseQueue.m in Sources */,
 				538E2DB81D87A53800FC55AF /* FMDatabase.m in Sources */,
 				530B97E01D806CA60074454C /* foundViewController.m in Sources */,
@@ -755,8 +891,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -800,8 +938,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -832,6 +972,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SMS_SDK",
+					"$(PROJECT_DIR)/baidumap",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newtravel/PrefixHeader.pch/";
@@ -849,6 +990,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SMS_SDK",
+					"$(PROJECT_DIR)/baidumap",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newtravel/PrefixHeader.pch/";

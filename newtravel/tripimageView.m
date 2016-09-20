@@ -24,9 +24,9 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    self.setimageView.frame = CGRectMake(self.frame.size.width/3.5, self.frame.size.height/4, UIScreenWidth/10, UIScreenWidth/12);
+    self.setimageView.frame = CGRectMake(self.frame.size.width/4, self.frame.size.height/4.5, UIScreenWidth/8, UIScreenWidth/10);
     
-    
+    self.namelabel.frame = CGRectMake(self.frame.size.width/4, self.frame.size.height/1.6, UIScreenWidth/8, UIScreenWidth/15);
 }
 
 -(UILabel *)namelabel
@@ -34,7 +34,10 @@
     if(!_namelabel)
     {
         _namelabel = [[UILabel alloc] init];
-        _namelabel.backgroundColor = [UIColor greenColor];
+       _namelabel.adjustsFontSizeToFitWidth = YES;
+        _namelabel.textAlignment = NSTextAlignmentCenter;
+        _namelabel.font = [UIFont fontWithName:@"Helvetica" size:12];
+        _namelabel.text = @"旅行行程";
     }
     return _namelabel;
 }
