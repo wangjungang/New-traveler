@@ -24,6 +24,8 @@
 		530B97D91D806C640074454C /* impressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97D81D806C640074454C /* impressionViewController.m */; };
 		530B97E01D806CA60074454C /* foundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97DF1D806CA60074454C /* foundViewController.m */; };
 		530B97E71D806CDC0074454C /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530B97E61D806CDC0074454C /* myViewController.m */; };
+		5310351E1D92D96B0079E517 /* MyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310351D1D92D96B0079E517 /* MyHeadView.m */; };
+		531035211D92D9A00079E517 /* MyFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531035201D92D9A00079E517 /* MyFootView.m */; };
 		5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310FB091D8FC7ED00F855FE /* pictripimageView.m */; };
 		5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310FB0C1D8FD5AF00F855FE /* navigationimageView.m */; };
 		5358F32E1D870200003213C0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F32D1D870200003213C0 /* libz.tbd */; };
@@ -37,6 +39,8 @@
 		5358F33F1D870276003213C0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F33E1D870276003213C0 /* AddressBookUI.framework */; };
 		535E42671D91523700570A07 /* addtripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E42661D91523700570A07 /* addtripimageView.m */; };
 		535E426A1D91524900570A07 /* writetripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E42691D91524900570A07 /* writetripimageView.m */; };
+		53763D581D927DF200A5C804 /* imagecollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53763D571D927DF200A5C804 /* imagecollectionViewController.m */; };
+		53763D5B1D9280B000A5C804 /* imageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53763D5A1D9280B000A5C804 /* imageCollectionViewCell.m */; };
 		538E2D3B1D87A01300FC55AF /* WJGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2D3A1D87A01300FC55AF /* WJGTabBarController.m */; };
 		538E2D4A1D87A4B300FC55AF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2D3E1D87A4B300FC55AF /* AFHTTPSessionManager.m */; };
 		538E2D4B1D87A4B300FC55AF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538E2D411D87A4B300FC55AF /* AFNetworkReachabilityManager.m */; };
@@ -113,6 +117,10 @@
 		530B97DF1D806CA60074454C /* foundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foundViewController.m; sourceTree = "<group>"; };
 		530B97E51D806CDC0074454C /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		530B97E61D806CDC0074454C /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
+		5310351C1D92D96B0079E517 /* MyHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHeadView.h; sourceTree = "<group>"; };
+		5310351D1D92D96B0079E517 /* MyHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeadView.m; sourceTree = "<group>"; };
+		5310351F1D92D9A00079E517 /* MyFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFootView.h; sourceTree = "<group>"; };
+		531035201D92D9A00079E517 /* MyFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFootView.m; sourceTree = "<group>"; };
 		5310FB081D8FC7ED00F855FE /* pictripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pictripimageView.h; sourceTree = "<group>"; };
 		5310FB091D8FC7ED00F855FE /* pictripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pictripimageView.m; sourceTree = "<group>"; };
 		5310FB0B1D8FD5AF00F855FE /* navigationimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navigationimageView.h; sourceTree = "<group>"; };
@@ -131,6 +139,10 @@
 		535E42661D91523700570A07 /* addtripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addtripimageView.m; sourceTree = "<group>"; };
 		535E42681D91524900570A07 /* writetripimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writetripimageView.h; sourceTree = "<group>"; };
 		535E42691D91524900570A07 /* writetripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = writetripimageView.m; sourceTree = "<group>"; };
+		53763D561D927DF200A5C804 /* imagecollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagecollectionViewController.h; sourceTree = "<group>"; };
+		53763D571D927DF200A5C804 /* imagecollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagecollectionViewController.m; sourceTree = "<group>"; };
+		53763D591D9280B000A5C804 /* imageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCollectionViewCell.h; sourceTree = "<group>"; };
+		53763D5A1D9280B000A5C804 /* imageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageCollectionViewCell.m; sourceTree = "<group>"; };
 		538E2D391D87A01300FC55AF /* WJGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJGTabBarController.h; sourceTree = "<group>"; };
 		538E2D3A1D87A01300FC55AF /* WJGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJGTabBarController.m; sourceTree = "<group>"; };
 		538E2D3D1D87A4B300FC55AF /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -284,6 +296,7 @@
 				530B97CC1D8065DA0074454C /* Main首页 */,
 				53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */,
 				53970ADC1D910A0F004857B7 /* moretrip更多行程 */,
+				53763D521D927BBD00A5C804 /* Imagecollection图集 */,
 				538E2DC21D87FC1800FC55AF /* Friend好友 */,
 				530B97D31D806C2D0074454C /* impression印象 */,
 				530B97DA1D806C7B0074454C /* found发现 */,
@@ -507,6 +520,45 @@
 				5358F3391D870251003213C0 /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		53763D521D927BBD00A5C804 /* Imagecollection图集 */ = {
+			isa = PBXGroup;
+			children = (
+				53763D551D927DD400A5C804 /* Controller */,
+				53763D541D927DD000A5C804 /* View */,
+				53763D531D927DC700A5C804 /* Model */,
+			);
+			name = "Imagecollection图集";
+			sourceTree = "<group>";
+		};
+		53763D531D927DC700A5C804 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53763D541D927DD000A5C804 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53763D591D9280B000A5C804 /* imageCollectionViewCell.h */,
+				53763D5A1D9280B000A5C804 /* imageCollectionViewCell.m */,
+				5310351C1D92D96B0079E517 /* MyHeadView.h */,
+				5310351D1D92D96B0079E517 /* MyHeadView.m */,
+				5310351F1D92D9A00079E517 /* MyFootView.h */,
+				531035201D92D9A00079E517 /* MyFootView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53763D551D927DD400A5C804 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53763D561D927DF200A5C804 /* imagecollectionViewController.h */,
+				53763D571D927DF200A5C804 /* imagecollectionViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		538E2D3C1D87A4B300FC55AF /* AFNetworking */ = {
@@ -828,6 +880,7 @@
 				53970AD81D90C967004857B7 /* managementimageView.m in Sources */,
 				538E2DA41D87A4F900FC55AF /* UIImageView+WebCache.m in Sources */,
 				535E426A1D91524900570A07 /* writetripimageView.m in Sources */,
+				531035211D92D9A00079E517 /* MyFootView.m in Sources */,
 				538E2DA21D87A4F900FC55AF /* UIImage+WebP.m in Sources */,
 				538E2D981D87A4F900FC55AF /* SDImageCache.m in Sources */,
 				530B97E71D806CDC0074454C /* myViewController.m in Sources */,
@@ -839,16 +892,19 @@
 				538E2DA31D87A4F900FC55AF /* UIImageView+HighlightedWebCache.m in Sources */,
 				538E2D4E1D87A4B300FC55AF /* AFURLResponseSerialization.m in Sources */,
 				538E2D931D87A4F900FC55AF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				5310351E1D92D96B0079E517 /* MyHeadView.m in Sources */,
 				538E2DBD1D87A53800FC55AF /* MBProgressHUD+XMG.m in Sources */,
 				538E2D4A1D87A4B300FC55AF /* AFHTTPSessionManager.m in Sources */,
 				535E42671D91523700570A07 /* addtripimageView.m in Sources */,
 				530B97BB1D8060110074454C /* ViewController.m in Sources */,
 				538E2D971D87A4F900FC55AF /* NSData+ImageContentType.m in Sources */,
 				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,
+				53763D581D927DF200A5C804 /* imagecollectionViewController.m in Sources */,
 				538E2D921D87A4F900FC55AF /* NSArray+MASAdditions.m in Sources */,
 				530B97B51D8060110074454C /* main.m in Sources */,
 				538E2D9A1D87A4F900FC55AF /* SDWebImageDecoder.m in Sources */,
 				538E2D911D87A4F900FC55AF /* MASViewConstraint.m in Sources */,
+				53763D5B1D9280B000A5C804 /* imageCollectionViewCell.m in Sources */,
 				530B97D21D806BD10074454C /* mainViewController.m in Sources */,
 				5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */,
 				538E2D4C1D87A4B300FC55AF /* AFSecurityPolicy.m in Sources */,

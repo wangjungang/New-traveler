@@ -8,7 +8,7 @@
 
 #import "travelitViewController.h"
 #import "Masonry.h"
-
+#import "moretripViewController.h"
 @interface travelitViewController ()<UITableViewDataSource,UITableViewDelegate>
 
     {
@@ -16,11 +16,21 @@
         NSArray *_sectionArray;
         NSMutableDictionary *_showDic;//用来判断分组展开与收缩的
         NSMutableArray *picarray;
+        BOOL isequal;
     }
 
 @property (nonatomic,strong) UIButton *addbtn;
 @property (nonatomic,strong) UITableView *traveltableView;
 @property (nonatomic,strong) UIImageView *arrowimageView;
+@property (nonatomic,strong) UITableView *righttableview;
+
+@property (nonatomic,strong) NSMutableArray *rightarr;
+@property (nonatomic,strong) NSMutableArray *rightpicarr;
+@property (nonatomic,strong) NSMutableDictionary *m_dict;
+@property (nonatomic,strong) NSMutableArray *arr1;
+@property (nonatomic,strong) NSMutableArray *arr2;
+@property (nonatomic,strong) NSMutableArray *arr3;
+
 @end
 
 @implementation travelitViewController
@@ -36,11 +46,21 @@
     [self leftpop];
     [self.view addSubview:self.traveltableView];
     [self.view addSubview:self.addbtn];
-    _sectionArray = [NSArray arrayWithObjects:@"首都国际机场",@"洛杉矶国际机场",@"贝斯特酒店",@"胡佛水坝", nil];
+    _m_dict=[NSMutableDictionary dictionary];
     
-    _rowArray = [NSArray arrayWithObjects:@"贝斯特酒店",@"拉斯国际购物中心",@"金门大桥", nil];
-
+    self.arr1 = [NSMutableArray arrayWithObjects:@"贝斯特酒店",@"拉斯国际购物中心",@"金门大桥", nil];
+    [self.m_dict setObject:self.arr1 forKey:@"首都国际机场"];
+    self.arr2 = [NSMutableArray arrayWithObjects:@"喜来登酒店",@"暴风城",@"萨格拉斯",@"伊利丹", nil];
+    [self.m_dict setObject:self.arr2 forKey:@"德拉诺"];
+    self.arr3 = [NSMutableArray arrayWithObjects:@"基尔加丹",@"萨尔",@"古尔丹",@"阿尔萨斯",@"奥格瑞姆",@"杜隆坦",nil];
+    [self.m_dict setObject:self.arr3 forKey:@"永恒之井"];
+    
     picarray = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"酒店图标"],[UIImage imageNamed:@"购物图标"],[UIImage imageNamed:@"景点图标"], nil];
+    
+    self.rightarr = [NSMutableArray arrayWithObjects:@"展开行程",@"好友排名",@"优质行程" ,nil];
+    self.rightpicarr = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"展开行程图标"],[UIImage imageNamed:@"好友排名图标"],[UIImage imageNamed:@"优质行程图标"], nil];
+    isequal = YES;
+    [self.view addSubview:self.righttableview];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +73,7 @@
     [super viewWillAppear:animated];
     self.addbtn.frame = CGRectMake(20, UIScreenHeight-130, 60, 60);
     self.traveltableView.frame = CGRectMake(80, 64, UIScreenWidth-120, UIScreenHeight-164);
+    self.righttableview.frame = CGRectMake(UIScreenWidth-120, 64-100, 100, 100);
 }
 
 #pragma mark - getters
@@ -91,6 +112,20 @@
     return _arrowimageView;
 }
 
+-(UITableView *)righttableview
+{
+    if(!_righttableview)
+    {
+        _righttableview = [[UITableView alloc] init];
+        _righttableview.dataSource = self;
+        _righttableview.delegate = self;
+        _righttableview.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"展开栏"]];
+        
+    }
+    return _righttableview;
+}
+
+
 #pragma mark - 实现方法
 //滑动pop
 -(void)leftpop
@@ -110,56 +145,142 @@
 
 -(void)addbtnclick
 {
-    
+    moretripViewController *moreVC = [[moretripViewController alloc] init];
+    moreVC.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"背景"]];
+    moreVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [self presentViewController:moreVC animated:YES completion:^{
+        
+    }];
 }
 
 -(void)nextpus
 {
-    
+    if (isequal==YES) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.righttableview.transform = CGAffineTransformMakeTranslation(0, 100);
+            isequal = !isequal;
+            [self.view bringSubviewToFront:self.righttableview];
+        }completion:^(BOOL finished) {
+            
+        }];
+    }else
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.righttableview.transform = CGAffineTransformIdentity;
+            isequal = !isequal;
+        }completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [_sectionArray count];
+    if (tableView==self.traveltableView) {
+//    return [_sectionArray count];
+        
+    return [self.m_dict allKeys].count;
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_rowArray count];
+    if (tableView==self.traveltableView) {
+       // return _rowArray.count;
+        //拿到数组中key的内容
+        NSArray *array=[self.m_dict allKeys];
+        //根据分组下标确定哪个key
+        NSString *key=array[section];
+        //通过key把对应的value拿到
+        NSArray *value=self.m_dict[key];
+        return [value count];
+    }
+    else
+    {
+        return self.rightarr.count;
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"这个自己命名"];
-    if(cell==NULL){
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"这个自己命名"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.separatorInset=UIEdgeInsetsZero;
-        cell.clipsToBounds = YES;
+    if (tableView==self.traveltableView) {
+        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"这个自己命名"];
+        if(cell==NULL){
+            cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"这个自己命名"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.separatorInset=UIEdgeInsetsZero;
+            cell.clipsToBounds = YES;
+        }
+        if (indexPath.section==2) {
+            cell.imageView.image = picarray[indexPath.row];
+        }
+        //拿到字典中数组key的内容
+        NSArray *array=[self.m_dict allKeys];
+        //根据分组下标确定哪个key
+        NSString *key=array[indexPath.section];
+        //通过key把对应的value拿到
+        NSArray *value=self.m_dict[key];
+        
+        cell.textLabel.text=value[indexPath.row];
+        return cell;
+
     }
-    
-    cell.textLabel.text = _rowArray[indexPath.row];
-    cell.imageView.image = picarray[indexPath.row];
-    return cell;
+    else
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"right"];
+        if (cell==NULL) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"right"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.separatorInset=UIEdgeInsetsZero;
+            cell.clipsToBounds = YES;
+            
+        }
+        cell.textLabel.adjustsFontSizeToFitWidth = YES;
+        cell.textLabel.text = self.rightarr[indexPath.row];
+        cell.imageView.image = self.rightpicarr[indexPath.row];
+        return cell;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([_showDic objectForKey:[NSString stringWithFormat:@"%ld",indexPath.section]]) {
-        return 44;
+    if (tableView==self.traveltableView) {
+        if ([_showDic objectForKey:[NSString stringWithFormat:@"%ld",indexPath.section]]) {
+            return 44;
+        }
+        return 0;
     }
-    return 0;
+    else
+    {
+        return 30;
+    }
 }
 //section头部高度
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
+    if (tableView==self.traveltableView) {
+        return 40;
+    }
+    else
+    {
+    return 0;
+    }
 }
 //section尾部高度
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 40;
-}
+    if (tableView==self.traveltableView) {
+        return 40;
+    }
+    else
+    {
+        return 0;
+    }}
 //section头部显示的内容
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -173,7 +294,8 @@
     UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(40, 5, 150, 20)];
     self.arrowimageView.frame = CGRectMake(self.traveltableView.frame.size.width-30, 8, 15, 12);
 
-    myLabel.text = _sectionArray[section];
+    myLabel.text =  [self.m_dict allKeys][section];
+    
     myLabel.textColor = [UIColor whiteColor];
     [header addSubview:myLabel];
     [header addSubview:self.arrowimageView];
@@ -205,6 +327,13 @@
     }
     [self.traveltableView reloadSections:[NSIndexSet indexSetWithIndex:didSection] withRowAnimation:UITableViewRowAnimationFade];
 }
+
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self.m_dict allKeys][section];
+}
+
 
 
 @end

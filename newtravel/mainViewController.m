@@ -16,7 +16,7 @@
 #import "managementimageView.h"
 #import "moretripViewController.h"
 #import "travelitViewController.h"
-
+#import "imagecollectionViewController.h"
 static NSString *kcellname = @"name1";
 @interface mainViewController ()<UITextFieldDelegate,UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
 {
@@ -74,8 +74,6 @@ static NSString *kcellname = @"name1";
     [self leftpop];
     [self.view addSubview:self.addresstableView];
     
-    
-   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -270,6 +268,8 @@ static NSString *kcellname = @"name1";
 -(void)buttonpress2
 {
     NSLog(@"行程图集");
+    imagecollectionViewController *imageVC = [[imagecollectionViewController alloc] init];
+    [self.navigationController pushViewController:imageVC animated:YES];
 }
 
 -(void)buttonpress3

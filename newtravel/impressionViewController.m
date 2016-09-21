@@ -18,7 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"晶格状态栏背景"] forBarMetrics:0];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.title = @"印象";
 }
 
 - (void)didReceiveMemoryWarning {
