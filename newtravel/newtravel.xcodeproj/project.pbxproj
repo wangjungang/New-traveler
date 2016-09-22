@@ -89,6 +89,8 @@
 		53970AE21D910A63004857B7 /* moretripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AE11D910A63004857B7 /* moretripViewController.m */; };
 		53970AE51D910FC9004857B7 /* tableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AE41D910FC9004857B7 /* tableView.m */; };
 		53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AEB1D911B47004857B7 /* travelitViewController.m */; };
+		539DD3BB1D936FFE00FBA78A /* tripnavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */; };
+		539DD3C21D9373B100FBA78A /* tripmanageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C11D9373B100FBA78A /* tripmanageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -245,6 +247,10 @@
 		53970AE41D910FC9004857B7 /* tableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableView.m; sourceTree = "<group>"; };
 		53970AEA1D911B47004857B7 /* travelitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = travelitViewController.h; sourceTree = "<group>"; };
 		53970AEB1D911B47004857B7 /* travelitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = travelitViewController.m; sourceTree = "<group>"; };
+		539DD3B91D936FFE00FBA78A /* tripnavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripnavViewController.h; sourceTree = "<group>"; };
+		539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripnavViewController.m; sourceTree = "<group>"; };
+		539DD3C01D9373B100FBA78A /* tripmanageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripmanageViewController.h; sourceTree = "<group>"; };
+		539DD3C11D9373B100FBA78A /* tripmanageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripmanageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +303,8 @@
 				53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */,
 				53970ADC1D910A0F004857B7 /* moretrip更多行程 */,
 				53763D521D927BBD00A5C804 /* Imagecollection图集 */,
+				539DD3B51D936FBC00FBA78A /* tripnavigation行程导航 */,
+				539DD3BC1D9371C300FBA78A /* tripmanagement行程管理 */,
 				538E2DC21D87FC1800FC55AF /* Friend好友 */,
 				530B97D31D806C2D0074454C /* impression印象 */,
 				530B97DA1D806C7B0074454C /* found发现 */,
@@ -786,6 +794,72 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		539DD3B51D936FBC00FBA78A /* tripnavigation行程导航 */ = {
+			isa = PBXGroup;
+			children = (
+				539DD3B81D936FEA00FBA78A /* Controller */,
+				539DD3B71D936FE600FBA78A /* View */,
+				539DD3B61D936FDF00FBA78A /* Model */,
+			);
+			name = "tripnavigation行程导航";
+			sourceTree = "<group>";
+		};
+		539DD3B61D936FDF00FBA78A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		539DD3B71D936FE600FBA78A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		539DD3B81D936FEA00FBA78A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				539DD3B91D936FFE00FBA78A /* tripnavViewController.h */,
+				539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		539DD3BC1D9371C300FBA78A /* tripmanagement行程管理 */ = {
+			isa = PBXGroup;
+			children = (
+				539DD3BF1D93739D00FBA78A /* Controller */,
+				539DD3BE1D93739700FBA78A /* View */,
+				539DD3BD1D93738E00FBA78A /* Model */,
+			);
+			name = "tripmanagement行程管理";
+			sourceTree = "<group>";
+		};
+		539DD3BD1D93738E00FBA78A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		539DD3BE1D93739700FBA78A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		539DD3BF1D93739D00FBA78A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				539DD3C01D9373B100FBA78A /* tripmanageViewController.h */,
+				539DD3C11D9373B100FBA78A /* tripmanageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -867,6 +941,7 @@
 				538E2DBF1D87A53800FC55AF /* MBProgressHUD.m in Sources */,
 				538E2DC81D87FC5000FC55AF /* friendViewController.m in Sources */,
 				538E2D9B1D87A4F900FC55AF /* SDWebImageDownloader.m in Sources */,
+				539DD3C21D9373B100FBA78A /* tripmanageViewController.m in Sources */,
 				538E2DBA1D87A53800FC55AF /* FMDatabasePool.m in Sources */,
 				538E2D4B1D87A4B300FC55AF /* AFNetworkReachabilityManager.m in Sources */,
 				53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */,
@@ -916,6 +991,7 @@
 				538E2DA01D87A4F900FC55AF /* UIImage+GIF.m in Sources */,
 				5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */,
 				538E2DBB1D87A53800FC55AF /* FMDatabaseQueue.m in Sources */,
+				539DD3BB1D936FFE00FBA78A /* tripnavViewController.m in Sources */,
 				538E2DB81D87A53800FC55AF /* FMDatabase.m in Sources */,
 				530B97E01D806CA60074454C /* foundViewController.m in Sources */,
 			);

@@ -24,7 +24,8 @@
         
         [self showScrollView];
     }
-
+    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"标签栏"]];
+    
 }
 
 #pragma mark - 滑动图

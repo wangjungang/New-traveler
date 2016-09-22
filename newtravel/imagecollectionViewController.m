@@ -44,9 +44,10 @@ static NSString *collectionview = @"imagecell";
     
     self.image_array = [NSMutableArray arrayWithObjects:self.image_arr1,self.image_arr2,self.image_arr3, nil];
     
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"新建图标"] style:UIBarButtonItemStylePlain target:self action:@selector(addbtnclick)];
     
     [self.view addSubview:self.image_collectionview];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,15 +59,15 @@ static NSString *collectionview = @"imagecell";
 {
     [super viewWillAppear:animated];
     self.bgimageview.frame = [UIScreen mainScreen].bounds;
-    
 }
+
 //创建uicollectionview
 
 -(void)addTheCollectionView{
     
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    self.image_collectionview = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, UIScreenWidth, UIScreenHeight) collectionViewLayout:flowLayout];
+    self.image_collectionview = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, UIScreenWidth, UIScreenHeight-64*2) collectionViewLayout:flowLayout];
     flowLayout.sectionInset = UIEdgeInsetsMake(20,0,0,0);
     //设置代理
     self.image_collectionview.delegate = self;
@@ -78,16 +79,16 @@ static NSString *collectionview = @"imagecell";
 #pragma mark -- 头尾部大小设置
     //设置头部并给定大小
     [flowLayout setHeaderReferenceSize:CGSizeMake(UIScreenWidth, 50)];
-    //设置尾部并给定大小
-    [flowLayout setFooterReferenceSize:CGSizeMake(UIScreenWidth, 50)];
+//    //设置尾部并给定大小
+//    [flowLayout setFooterReferenceSize:CGSizeMake(UIScreenWidth, 50)];
     
 #pragma mark -- 注册单元格
     [_image_collectionview registerClass:[imageCollectionViewCell class] forCellWithReuseIdentifier:collectionview];
     
 #pragma mark -- 注册头部视图
     [self.image_collectionview registerClass:[MyHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
-#pragma mark -- 注册尾部视图
-    [self.image_collectionview registerClass:[MyFootView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView"];
+//#pragma mark -- 注册尾部视图
+//    [self.image_collectionview registerClass:[MyFootView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView"];
     
     [self.view addSubview:self.image_collectionview];
     
@@ -117,7 +118,6 @@ static NSString *collectionview = @"imagecell";
 //          recipeImageView.image = [UIImage imagedNamed:[recipeImages[indexPath.section] objectAtIndex:indexPath.row]];
     
     _cell.imageview.image = [self.image_array[indexPath.section] objectAtIndex:indexPath.row];
-//      _cell.imageview.image = [UIImage imageNamed:[self.image_array[indexPath.section] objectAtIndex:indexPath.row]];
     
     return _cell;
 }
@@ -169,14 +169,23 @@ static NSString *collectionview = @"imagecell";
     if (kind == UICollectionElementKindSectionHeader) {
         //定制头部视图的内容
         MyHeadView *headerV = (MyHeadView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        headerV.titleLab.text = @"头部视图";
+//        headerV.titleLab.text = @"头部视图";
+        if (indexPath.section==0) {
+            headerV.titleLab.text = @"2016-8-27 纽约";
+        }
+        if (indexPath.section==1) {
+            headerV.titleLab.text = @"2016-9-27 巴黎";
+        }
+        if (indexPath.section==2) {
+            headerV.titleLab.text = @"2016-11-27 伦敦";
+        }
         reusableView = headerV;
     }
-    if (kind == UICollectionElementKindSectionFooter){
-        MyFootView *footerV = (MyFootView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
-        footerV.titleLab.text = @"尾部视图";
-        reusableView = footerV;
-    }
+//    if (kind == UICollectionElementKindSectionFooter){
+//        MyFootView *footerV = (MyFootView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
+//        footerV.titleLab.text = @"尾部视图";
+//        reusableView = footerV;
+//    }
     return reusableView;
 }
 
@@ -190,6 +199,13 @@ static NSString *collectionview = @"imagecell";
         _bgimageview.image = [UIImage imageNamed:@"bg"];
     }
     return _bgimageview;
+}
+
+#pragma mark - 实现方法
+-(void)addbtnclick
+{
+    NSLog(@"新建图标");
+    
 }
 
 

@@ -17,6 +17,8 @@
 #import "moretripViewController.h"
 #import "travelitViewController.h"
 #import "imagecollectionViewController.h"
+#import "tripnavViewController.h"
+#import "tripmanageViewController.h"
 static NSString *kcellname = @"name1";
 @interface mainViewController ()<UITextFieldDelegate,UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
 {
@@ -275,11 +277,15 @@ static NSString *kcellname = @"name1";
 -(void)buttonpress3
 {
     NSLog(@"行程导航");
+    tripnavViewController *tripnavVC = [[tripnavViewController alloc] init];
+    [self.navigationController pushViewController:tripnavVC animated:YES];
 }
 
 -(void)buttonpress4
 {
     NSLog(@"行程管理");
+    tripmanageViewController *tripmanageVC = [[tripmanageViewController alloc] init];
+    [self.navigationController pushViewController:tripmanageVC animated:YES];
 }
 
 -(void)buttonpress5
