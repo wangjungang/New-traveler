@@ -91,6 +91,18 @@
 		53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AEB1D911B47004857B7 /* travelitViewController.m */; };
 		539DD3BB1D936FFE00FBA78A /* tripnavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */; };
 		539DD3C21D9373B100FBA78A /* tripmanageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C11D9373B100FBA78A /* tripmanageViewController.m */; };
+		539DD3C51D937EF400FBA78A /* manageTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C41D937EF400FBA78A /* manageTableViewCell1.m */; };
+		539DD3C81D937F0100FBA78A /* manageTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C71D937F0100FBA78A /* manageTableViewCell2.m */; };
+		539DD3CB1D937F0E00FBA78A /* manageTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3CA1D937F0E00FBA78A /* manageTableViewCell3.m */; };
+		53ACB3931D94D25D005C9A61 /* dialimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3921D94D25D005C9A61 /* dialimageView.m */; };
+		53ACB3961D94D84C005C9A61 /* addimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3951D94D84C005C9A61 /* addimageView.m */; };
+		53ACB3991D951215005C9A61 /* jinxuanimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3981D951215005C9A61 /* jinxuanimageView.m */; };
+		53ACB39C1D9520BA005C9A61 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB39B1D9520BA005C9A61 /* CoreLocation.framework */; };
+		53ACB39E1D9520C1005C9A61 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB39D1D9520C1005C9A61 /* MapKit.framework */; };
+		53ACB3A11D9525F5005C9A61 /* impressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3A01D9525F5005C9A61 /* impressTableViewCell.m */; };
+		53ACB3A41D9541DC005C9A61 /* bottomimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3A31D9541DC005C9A61 /* bottomimageView.m */; };
+		53ACB3A61D95458C005C9A61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3A51D95458C005C9A61 /* AVFoundation.framework */; };
+		53ACB3AD1D95466B005C9A61 /* qrcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3AC1D95466B005C9A61 /* qrcodeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -251,6 +263,27 @@
 		539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripnavViewController.m; sourceTree = "<group>"; };
 		539DD3C01D9373B100FBA78A /* tripmanageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripmanageViewController.h; sourceTree = "<group>"; };
 		539DD3C11D9373B100FBA78A /* tripmanageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripmanageViewController.m; sourceTree = "<group>"; };
+		539DD3C31D937EF400FBA78A /* manageTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageTableViewCell1.h; sourceTree = "<group>"; };
+		539DD3C41D937EF400FBA78A /* manageTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageTableViewCell1.m; sourceTree = "<group>"; };
+		539DD3C61D937F0100FBA78A /* manageTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageTableViewCell2.h; sourceTree = "<group>"; };
+		539DD3C71D937F0100FBA78A /* manageTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageTableViewCell2.m; sourceTree = "<group>"; };
+		539DD3C91D937F0E00FBA78A /* manageTableViewCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageTableViewCell3.h; sourceTree = "<group>"; };
+		539DD3CA1D937F0E00FBA78A /* manageTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageTableViewCell3.m; sourceTree = "<group>"; };
+		53ACB3911D94D25D005C9A61 /* dialimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dialimageView.h; sourceTree = "<group>"; };
+		53ACB3921D94D25D005C9A61 /* dialimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dialimageView.m; sourceTree = "<group>"; };
+		53ACB3941D94D84C005C9A61 /* addimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addimageView.h; sourceTree = "<group>"; };
+		53ACB3951D94D84C005C9A61 /* addimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addimageView.m; sourceTree = "<group>"; };
+		53ACB3971D951215005C9A61 /* jinxuanimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jinxuanimageView.h; sourceTree = "<group>"; };
+		53ACB3981D951215005C9A61 /* jinxuanimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jinxuanimageView.m; sourceTree = "<group>"; };
+		53ACB39B1D9520BA005C9A61 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		53ACB39D1D9520C1005C9A61 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		53ACB39F1D9525F5005C9A61 /* impressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impressTableViewCell.h; sourceTree = "<group>"; };
+		53ACB3A01D9525F5005C9A61 /* impressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = impressTableViewCell.m; sourceTree = "<group>"; };
+		53ACB3A21D9541DC005C9A61 /* bottomimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bottomimageView.h; sourceTree = "<group>"; };
+		53ACB3A31D9541DC005C9A61 /* bottomimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bottomimageView.m; sourceTree = "<group>"; };
+		53ACB3A51D95458C005C9A61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		53ACB3AB1D95466B005C9A61 /* qrcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrcodeViewController.h; sourceTree = "<group>"; };
+		53ACB3AC1D95466B005C9A61 /* qrcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = qrcodeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +291,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53ACB3A61D95458C005C9A61 /* AVFoundation.framework in Frameworks */,
+				53ACB39E1D9520C1005C9A61 /* MapKit.framework in Frameworks */,
+				53ACB39C1D9520BA005C9A61 /* CoreLocation.framework in Frameworks */,
 				538E2DC11D87A55400FC55AF /* libsqlite3.0.tbd in Frameworks */,
 				530A0F231D885E78004C28FA /* BaiduMapAPI_Map.framework in Frameworks */,
 				530A0F261D885E78004C28FA /* BaiduMapAPI_Utils.framework in Frameworks */,
@@ -300,6 +336,7 @@
 			children = (
 				530B97CB1D8065BD0074454C /* Other */,
 				530B97CC1D8065DA0074454C /* Main首页 */,
+				53ACB3A71D954598005C9A61 /* Qrcode二维码 */,
 				53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */,
 				53970ADC1D910A0F004857B7 /* moretrip更多行程 */,
 				53763D521D927BBD00A5C804 /* Imagecollection图集 */,
@@ -309,9 +346,9 @@
 				530B97D31D806C2D0074454C /* impression印象 */,
 				530B97DA1D806C7B0074454C /* found发现 */,
 				530B97E11D806CB20074454C /* my我的 */,
-				530B97CA1D8065B50074454C /* Framworks */,
 				530B97B21D8060110074454C /* newtravel */,
 				530B97B11D8060110074454C /* Products */,
+				53ACB39A1D9520B9005C9A61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -338,28 +375,6 @@
 				5358F3411D870565003213C0 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		530B97CA1D8065B50074454C /* Framworks */ = {
-			isa = PBXGroup;
-			children = (
-				530A0F181D885E78004C28FA /* baidumap */,
-				538E2DA61D87A53800FC55AF /* fmdb */,
-				538E2DB21D87A53800FC55AF /* MBProgressHUD */,
-				538E2D501D87A4F900FC55AF /* Masonry */,
-				538E2D6A1D87A4F900FC55AF /* SDWebImage */,
-				538E2D3C1D87A4B300FC55AF /* AFNetworking */,
-				538E2DC01D87A55400FC55AF /* libsqlite3.0.tbd */,
-				5358F33E1D870276003213C0 /* AddressBookUI.framework */,
-				5358F33C1D870271003213C0 /* AddressBook.framework */,
-				5358F3371D870251003213C0 /* SMS_SDK */,
-				5358F3351D87023C003213C0 /* libstdc++.tbd */,
-				5358F3331D87022F003213C0 /* JavaScriptCore.framework */,
-				5358F3311D870220003213C0 /* MessageUI.framework */,
-				5358F32F1D870211003213C0 /* libicucore.tbd */,
-				5358F32D1D870200003213C0 /* libz.tbd */,
-			);
-			name = Framworks;
 			sourceTree = "<group>";
 		};
 		530B97CB1D8065BD0074454C /* Other */ = {
@@ -442,6 +457,10 @@
 		530B97D51D806C510074454C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53ACB39F1D9525F5005C9A61 /* impressTableViewCell.h */,
+				53ACB3A01D9525F5005C9A61 /* impressTableViewCell.m */,
+				53ACB3A21D9541DC005C9A61 /* bottomimageView.h */,
+				53ACB3A31D9541DC005C9A61 /* bottomimageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -847,6 +866,18 @@
 		539DD3BE1D93739700FBA78A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				539DD3C31D937EF400FBA78A /* manageTableViewCell1.h */,
+				539DD3C41D937EF400FBA78A /* manageTableViewCell1.m */,
+				539DD3C61D937F0100FBA78A /* manageTableViewCell2.h */,
+				539DD3C71D937F0100FBA78A /* manageTableViewCell2.m */,
+				539DD3C91D937F0E00FBA78A /* manageTableViewCell3.h */,
+				539DD3CA1D937F0E00FBA78A /* manageTableViewCell3.m */,
+				53ACB3911D94D25D005C9A61 /* dialimageView.h */,
+				53ACB3921D94D25D005C9A61 /* dialimageView.m */,
+				53ACB3941D94D84C005C9A61 /* addimageView.h */,
+				53ACB3951D94D84C005C9A61 /* addimageView.m */,
+				53ACB3971D951215005C9A61 /* jinxuanimageView.h */,
+				53ACB3981D951215005C9A61 /* jinxuanimageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -856,6 +887,64 @@
 			children = (
 				539DD3C01D9373B100FBA78A /* tripmanageViewController.h */,
 				539DD3C11D9373B100FBA78A /* tripmanageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		53ACB39A1D9520B9005C9A61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53ACB3A51D95458C005C9A61 /* AVFoundation.framework */,
+				530A0F181D885E78004C28FA /* baidumap */,
+				538E2DA61D87A53800FC55AF /* fmdb */,
+				538E2DB21D87A53800FC55AF /* MBProgressHUD */,
+				538E2D501D87A4F900FC55AF /* Masonry */,
+				538E2D6A1D87A4F900FC55AF /* SDWebImage */,
+				538E2D3C1D87A4B300FC55AF /* AFNetworking */,
+				538E2DC01D87A55400FC55AF /* libsqlite3.0.tbd */,
+				5358F33E1D870276003213C0 /* AddressBookUI.framework */,
+				5358F33C1D870271003213C0 /* AddressBook.framework */,
+				5358F3371D870251003213C0 /* SMS_SDK */,
+				5358F3351D87023C003213C0 /* libstdc++.tbd */,
+				5358F3331D87022F003213C0 /* JavaScriptCore.framework */,
+				5358F3311D870220003213C0 /* MessageUI.framework */,
+				5358F32F1D870211003213C0 /* libicucore.tbd */,
+				5358F32D1D870200003213C0 /* libz.tbd */,
+				53ACB39D1D9520C1005C9A61 /* MapKit.framework */,
+				53ACB39B1D9520BA005C9A61 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53ACB3A71D954598005C9A61 /* Qrcode二维码 */ = {
+			isa = PBXGroup;
+			children = (
+				53ACB3AA1D954652005C9A61 /* Controller */,
+				53ACB3A91D954648005C9A61 /* View */,
+				53ACB3A81D954643005C9A61 /* Model */,
+			);
+			name = "Qrcode二维码";
+			sourceTree = "<group>";
+		};
+		53ACB3A81D954643005C9A61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53ACB3A91D954648005C9A61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53ACB3AA1D954652005C9A61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53ACB3AB1D95466B005C9A61 /* qrcodeViewController.h */,
+				53ACB3AC1D95466B005C9A61 /* qrcodeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -891,6 +980,8 @@
 				TargetAttributes = {
 					530B97AF1D8060110074454C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3637W6NRU9;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -938,6 +1029,7 @@
 				538E2D951D87A4F900FC55AF /* ViewController+MASAdditions.m in Sources */,
 				538E2DB91D87A53800FC55AF /* FMDatabaseAdditions.m in Sources */,
 				530B97D91D806C640074454C /* impressionViewController.m in Sources */,
+				53ACB3A11D9525F5005C9A61 /* impressTableViewCell.m in Sources */,
 				538E2DBF1D87A53800FC55AF /* MBProgressHUD.m in Sources */,
 				538E2DC81D87FC5000FC55AF /* friendViewController.m in Sources */,
 				538E2D9B1D87A4F900FC55AF /* SDWebImageDownloader.m in Sources */,
@@ -945,6 +1037,7 @@
 				538E2DBA1D87A53800FC55AF /* FMDatabasePool.m in Sources */,
 				538E2D4B1D87A4B300FC55AF /* AFNetworkReachabilityManager.m in Sources */,
 				53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */,
+				539DD3C51D937EF400FBA78A /* manageTableViewCell1.m in Sources */,
 				538E2D991D87A4F900FC55AF /* SDWebImageCompat.m in Sources */,
 				538E2D4F1D87A4B300FC55AF /* AFURLSessionManager.m in Sources */,
 				538E2D8C1D87A4F900FC55AF /* MASCompositeConstraint.m in Sources */,
@@ -962,10 +1055,12 @@
 				538E2DA11D87A4F900FC55AF /* UIImage+MultiFormat.m in Sources */,
 				538E2D9C1D87A4F900FC55AF /* SDWebImageDownloaderOperation.m in Sources */,
 				538E2D901D87A4F900FC55AF /* MASViewAttribute.m in Sources */,
+				539DD3C81D937F0100FBA78A /* manageTableViewCell2.m in Sources */,
 				53970AE51D910FC9004857B7 /* tableView.m in Sources */,
 				538E2DBC1D87A53800FC55AF /* FMResultSet.m in Sources */,
 				538E2DA31D87A4F900FC55AF /* UIImageView+HighlightedWebCache.m in Sources */,
 				538E2D4E1D87A4B300FC55AF /* AFURLResponseSerialization.m in Sources */,
+				53ACB3931D94D25D005C9A61 /* dialimageView.m in Sources */,
 				538E2D931D87A4F900FC55AF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5310351E1D92D96B0079E517 /* MyHeadView.m in Sources */,
 				538E2DBD1D87A53800FC55AF /* MBProgressHUD+XMG.m in Sources */,
@@ -976,6 +1071,7 @@
 				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,
 				53763D581D927DF200A5C804 /* imagecollectionViewController.m in Sources */,
 				538E2D921D87A4F900FC55AF /* NSArray+MASAdditions.m in Sources */,
+				53ACB3961D94D84C005C9A61 /* addimageView.m in Sources */,
 				530B97B51D8060110074454C /* main.m in Sources */,
 				538E2D9A1D87A4F900FC55AF /* SDWebImageDecoder.m in Sources */,
 				538E2D911D87A4F900FC55AF /* MASViewConstraint.m in Sources */,
@@ -983,16 +1079,20 @@
 				530B97D21D806BD10074454C /* mainViewController.m in Sources */,
 				5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */,
 				538E2D4C1D87A4B300FC55AF /* AFSecurityPolicy.m in Sources */,
+				539DD3CB1D937F0E00FBA78A /* manageTableViewCell3.m in Sources */,
 				53970AE21D910A63004857B7 /* moretripViewController.m in Sources */,
+				53ACB3A41D9541DC005C9A61 /* bottomimageView.m in Sources */,
 				538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */,
 				538E2D8F1D87A4F900FC55AF /* MASLayoutConstraint.m in Sources */,
 				538E2D9E1D87A4F900FC55AF /* SDWebImagePrefetcher.m in Sources */,
 				538E2D961D87A4F900FC55AF /* MKAnnotationView+WebCache.m in Sources */,
 				538E2DA01D87A4F900FC55AF /* UIImage+GIF.m in Sources */,
+				53ACB3991D951215005C9A61 /* jinxuanimageView.m in Sources */,
 				5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */,
 				538E2DBB1D87A53800FC55AF /* FMDatabaseQueue.m in Sources */,
 				539DD3BB1D936FFE00FBA78A /* tripnavViewController.m in Sources */,
 				538E2DB81D87A53800FC55AF /* FMDatabase.m in Sources */,
+				53ACB3AD1D95466B005C9A61 /* qrcodeViewController.m in Sources */,
 				530B97E01D806CA60074454C /* foundViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1113,6 +1213,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3637W6NRU9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SMS_SDK",
@@ -1124,6 +1226,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjungang.newtravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "newtravel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1131,6 +1236,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3637W6NRU9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SMS_SDK",
@@ -1142,6 +1249,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjungang.newtravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "newtravel-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

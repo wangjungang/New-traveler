@@ -19,8 +19,12 @@
 #import "imagecollectionViewController.h"
 #import "tripnavViewController.h"
 #import "tripmanageViewController.h"
+
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "qrcodeViewController.h"
 static NSString *kcellname = @"name1";
-@interface mainViewController ()<UITextFieldDelegate,UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
+@interface mainViewController ()<UITextFieldDelegate,UIScrollViewDelegate,UIScrollViewAccessibilityDelegate,CLLocationManagerDelegate,MKMapViewDelegate>
 {
     BOOL isequal;
     
@@ -42,6 +46,11 @@ static NSString *kcellname = @"name1";
 @property (nonatomic,strong) UITableView *addresstableView;
 @property (nonatomic,strong) NSMutableArray *addressarr;
 
+@property(strong,nonatomic) CLLocationManager *myLocationManager;
+@property(strong,nonatomic) CLGeocoder *myGeocoder;
+@property(strong,nonatomic) CLLocation *myLocation;
+
+@property (nonatomic , strong)CLLocationManager *locationManager;
 
 @end
 
@@ -52,17 +61,19 @@ static NSString *kcellname = @"name1";
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
  
+    [self positioning];
+
+    
     isequal = YES;
     self.addressarr = [NSMutableArray arrayWithObjects:@"北京",@"上海",@"广州",@"深圳",@"天津",@"杭州",@"南京",@"重庆",@"西安", nil];
     [self.view addSubview:self.backimageView];
     [self.view addSubview:self.qrcodeBtn];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"晶格状态栏背景"] forBarMetrics:0];
-    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"扫描"] style:UIBarButtonItemStylePlain target:self action:@selector(nextpus)];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"扫描"] style:UIBarButtonItemStylePlain target:self action:@selector(nextpus2)];
     
     [self.navigationItem setTitleView:self.searchtext];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"address"style:UIBarButtonItemStylePlain target:self action:@selector(leftpusClick)];
-    
+  
     self.view.userInteractionEnabled = YES;
     UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonpress5)];
     [self.view addGestureRecognizer:singleTap1];
@@ -149,6 +160,8 @@ static NSString *kcellname = @"name1";
     {
         _searchtext = [[UITextField alloc] init];
         _searchtext.delegate = self;
+        _searchtext.layer.masksToBounds = YES;
+        _searchtext.layer.cornerRadius = 6;
         _searchtext.backgroundColor = [UIColor whiteColor];
         _searchtext.placeholder = @"请输入地址";
     }
@@ -227,16 +240,18 @@ static NSString *kcellname = @"name1";
         _addresstableView.dataSource = self;
         _addresstableView.delegate = self;
         //_addresstableView.backgroundColor = [UIColor redColor];
-        
+       _addresstableView.userInteractionEnabled = YES;
+
     }
     return _addresstableView;
 }
 
 #pragma mark - 实现方法
 
--(void)nextpus
+-(void)nextpus2
 {
-    
+    qrcodeViewController *qrcodevc = [[qrcodeViewController alloc] init];
+    [self.navigationController pushViewController:qrcodevc animated:YES];
 }
 
 -(void)leftpusClick
@@ -363,6 +378,77 @@ static NSString *kcellname = @"name1";
         [invocation invoke];
     }
     
+}
+
+
+
+-(void)positioning
+{
+    self.locationManager=[[CLLocationManager alloc] init];
+    self.locationManager.delegate=self;
+    self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter=10;
+    
+    [self.locationManager requestWhenInUseAuthorization];//使用程序其间允许访问位置数据（iOS8定位需要）
+    
+    [self.locationManager startUpdatingLocation];//开启定位
+}
+
+- (void)locate{
+    // 判断定位操作是否被允许
+    if([CLLocationManager locationServicesEnabled]) {
+        //定位初始化
+        _locationManager=[[CLLocationManager alloc] init];
+        _locationManager.delegate=self;
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        _locationManager.distanceFilter=10;
+        [_locationManager startUpdatingLocation];//开启定位
+    }else {
+        //提示用户无法进行定位操作
+        //        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@提示 message:@定位不成功 ,请确认开启定位 delegate:nil cancelButtonTitle:@取消 otherButtonTitles:@确定, nil];
+        //        [alertView show];
+        
+    }
+    // 开始定位
+    [_locationManager startUpdatingLocation];
+}
+
+#pragma mark - CoreLocation Delegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    //此处locations存储了持续更新的位置坐标值，取最后一个值为最新位置，如果不想让其持续更新位置，则在此方法中获取到一个值之后让locationManager stopUpdatingLocation
+    CLLocation *currentLocation = [locations lastObject];
+    // 获取当前所在的城市名
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    //根据经纬度反向地理编译出地址信息
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *array, NSError *error)
+     {
+         if (array.count > 0)
+         {
+             CLPlacemark *placemark = [array objectAtIndex:0];
+             //NSLog(@%@,placemark.name);//具体位置
+             //获取城市
+             NSString *city = placemark.locality;
+             if (!city) {
+                 //四大直辖市的城市信息无法通过locality获得，只能通过获取省份的方法来获得（如果city为空，则可知为直辖市）
+                 city = placemark.administrativeArea;
+             }
+             self.addressStr = city;
+             NSLog(@"定位完成:%@",self.addressStr);
+             self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:self.addressStr style:UIBarButtonItemStylePlain target:self action:@selector(leftpusClick)];
+             
+            // self.address_label.text = self.addressStr;
+             //系统会一直更新数据，直到选择停止更新，因为我们只需要获得一次经纬度即可，所以获取之后就停止更新
+             [manager stopUpdatingLocation];
+         }else if (error == nil && [array count] == 0)
+         {
+             NSLog(@"No results were returned.");
+         }else if (error != nil)
+         {
+             NSLog(@"An error occurred = %@", error);
+         }
+     }];
 }
 
 

@@ -23,13 +23,17 @@
 @property (nonatomic,strong) UITableView *traveltableView;
 @property (nonatomic,strong) UIImageView *arrowimageView;
 @property (nonatomic,strong) UITableView *righttableview;
-
 @property (nonatomic,strong) NSMutableArray *rightarr;
 @property (nonatomic,strong) NSMutableArray *rightpicarr;
 @property (nonatomic,strong) NSMutableDictionary *m_dict;
 @property (nonatomic,strong) NSMutableArray *arr1;
 @property (nonatomic,strong) NSMutableArray *arr2;
 @property (nonatomic,strong) NSMutableArray *arr3;
+
+@property (nonatomic,strong) UIImageView *imageview1;
+@property (nonatomic,strong) UIImageView *imageview2;
+@property (nonatomic,strong) UIImageView *imageview3;
+
 
 @end
 
@@ -61,6 +65,10 @@
     self.rightpicarr = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"展开行程图标"],[UIImage imageNamed:@"好友排名图标"],[UIImage imageNamed:@"优质行程图标"], nil];
     isequal = YES;
     [self.view addSubview:self.righttableview];
+    
+    [self.view addSubview:self.imageview1];
+    [self.view addSubview:self.imageview2];
+    [self.view addSubview:self.imageview3];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +82,11 @@
     self.addbtn.frame = CGRectMake(20, UIScreenHeight-130, 60, 60);
     self.traveltableView.frame = CGRectMake(80, 64, UIScreenWidth-120, UIScreenHeight-164);
     self.righttableview.frame = CGRectMake(UIScreenWidth-120, 64-100, 100, 100);
+    
+    self.imageview1.frame = CGRectMake(25, 94, 30, 30);
+    self.imageview2.frame = CGRectMake(25, 180, 30, 30);
+    self.imageview3.frame = CGRectMake(25, 266, 30, 30);
+    
 }
 
 #pragma mark - getters
@@ -124,6 +137,39 @@
     }
     return _righttableview;
 }
+
+-(UIImageView *)imageview1
+{
+    if(!_imageview1)
+    {
+        _imageview1 = [[UIImageView alloc] init];
+        _imageview1.image = [UIImage imageNamed:@"点图标"];
+    }
+    return _imageview1;
+}
+
+-(UIImageView *)imageview2
+{
+    if(!_imageview2)
+    {
+        _imageview2 = [[UIImageView alloc] init];
+        _imageview2.image = [UIImage imageNamed:@"景点图标"];
+    }
+    return _imageview2;
+}
+
+-(UIImageView *)imageview3
+{
+    if(!_imageview3)
+    {
+        _imageview3 = [[UIImageView alloc]init];
+        _imageview3.image = [UIImage imageNamed:@"酒店图标"];
+    }
+    return _imageview3;
+}
+
+
+
 
 
 #pragma mark - 实现方法
@@ -326,8 +372,53 @@
         [_showDic removeObjectForKey:key];
     }
     [self.traveltableView reloadSections:[NSIndexSet indexSetWithIndex:didSection] withRowAnimation:UITableViewRowAnimationFade];
-}
+    NSString *str = [_showDic objectForKey:key];
 
+    if (didSection==0&&[str isEqualToString:@"1"]) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.imageview2.transform =CGAffineTransformMakeTranslation(0, 44*self.arr1.count+44);
+        }completion:^(BOOL finished) {
+            
+        }];
+        [UIView animateWithDuration:0.3 animations:^{
+            self.imageview3.transform =CGAffineTransformMakeTranslation(0, 44*self.arr2.count+44);
+        }completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+    if (didSection==0&&![str isEqualToString:@"1"]) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.imageview2.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+        [UIView animateWithDuration:0.3 animations:^{
+            self.imageview3.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+    
+    if (didSection==1&&[str isEqualToString:@"1"]) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.imageview3.transform =CGAffineTransformMakeTranslation(0, 44*self.arr2.count+44);
+        }completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+    if (didSection==1&&![str isEqualToString:@"1"]) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.imageview3.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+    }
+    
+}
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
