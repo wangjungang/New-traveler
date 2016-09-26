@@ -10,6 +10,7 @@
 #import "impressTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
+#import "writeimpressViewController.h"
 @interface impressionViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *impresstableview;
 @property (nonatomic,strong) UILabel *titlelabel;
@@ -102,8 +103,12 @@ static NSString *kcellname = @"name1";
 //cell点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     NSLog(@"点击了cell");
+    writeimpressViewController *writeVC = [[writeimpressViewController alloc] init];
+    [self presentViewController:writeVC animated:YES completion:^{
+        
+    }];
+    
 }
 
 @end

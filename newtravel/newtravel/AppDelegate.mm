@@ -58,7 +58,7 @@ BMKMapManager* _mapManager;
     
     // 要使用百度地图，请先启动BaiduMapManager
     _mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"9HwXObdOubPoRpuRO0wUHdmFHC0qY9vW" generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"fVtAHRwyNAT1FaKROq9L5TD0bnOIoGhl" generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }

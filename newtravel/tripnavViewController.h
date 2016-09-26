@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface tripnavViewController : UIViewController
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+@interface tripnavViewController : UIViewController<BMKMapViewDelegate, BMKRouteSearchDelegate>
 
 @end

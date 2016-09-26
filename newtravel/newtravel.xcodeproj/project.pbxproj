@@ -89,7 +89,7 @@
 		53970AE21D910A63004857B7 /* moretripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AE11D910A63004857B7 /* moretripViewController.m */; };
 		53970AE51D910FC9004857B7 /* tableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AE41D910FC9004857B7 /* tableView.m */; };
 		53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53970AEB1D911B47004857B7 /* travelitViewController.m */; };
-		539DD3BB1D936FFE00FBA78A /* tripnavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */; };
+		539DD3BB1D936FFE00FBA78A /* tripnavViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3BA1D936FFE00FBA78A /* tripnavViewController.mm */; };
 		539DD3C21D9373B100FBA78A /* tripmanageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C11D9373B100FBA78A /* tripmanageViewController.m */; };
 		539DD3C51D937EF400FBA78A /* manageTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C41D937EF400FBA78A /* manageTableViewCell1.m */; };
 		539DD3C81D937F0100FBA78A /* manageTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C71D937F0100FBA78A /* manageTableViewCell2.m */; };
@@ -103,6 +103,15 @@
 		53ACB3A41D9541DC005C9A61 /* bottomimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3A31D9541DC005C9A61 /* bottomimageView.m */; };
 		53ACB3A61D95458C005C9A61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3A51D95458C005C9A61 /* AVFoundation.framework */; };
 		53ACB3AD1D95466B005C9A61 /* qrcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3AC1D95466B005C9A61 /* qrcodeViewController.m */; };
+		53ACB3B41D960F6B005C9A61 /* writeimpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3B31D960F6B005C9A61 /* writeimpressViewController.m */; };
+		53ACB3B61D9651B7005C9A61 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3B51D9651B7005C9A61 /* libstdc++.6.0.9.tbd */; };
+		53ACB3B81D9651F5005C9A61 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3B71D9651F5005C9A61 /* CoreTelephony.framework */; };
+		53ACB3BA1D96520A005C9A61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3B91D96520A005C9A61 /* Security.framework */; };
+		53ACB3BC1D965214005C9A61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3BB1D965214005C9A61 /* CoreGraphics.framework */; };
+		53ACB3BE1D965223005C9A61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3BD1D965223005C9A61 /* SystemConfiguration.framework */; };
+		53ACB3C01D965230005C9A61 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3BF1D965230005C9A61 /* OpenGLES.framework */; };
+		53ACB3C21D96523C005C9A61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3C11D96523C005C9A61 /* QuartzCore.framework */; };
+		53ACB3C41D9657BE005C9A61 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53ACB3C31D9657BE005C9A61 /* mapapi.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -260,7 +269,7 @@
 		53970AEA1D911B47004857B7 /* travelitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = travelitViewController.h; sourceTree = "<group>"; };
 		53970AEB1D911B47004857B7 /* travelitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = travelitViewController.m; sourceTree = "<group>"; };
 		539DD3B91D936FFE00FBA78A /* tripnavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripnavViewController.h; sourceTree = "<group>"; };
-		539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripnavViewController.m; sourceTree = "<group>"; };
+		539DD3BA1D936FFE00FBA78A /* tripnavViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tripnavViewController.mm; sourceTree = "<group>"; };
 		539DD3C01D9373B100FBA78A /* tripmanageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripmanageViewController.h; sourceTree = "<group>"; };
 		539DD3C11D9373B100FBA78A /* tripmanageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripmanageViewController.m; sourceTree = "<group>"; };
 		539DD3C31D937EF400FBA78A /* manageTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageTableViewCell1.h; sourceTree = "<group>"; };
@@ -284,6 +293,16 @@
 		53ACB3A51D95458C005C9A61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		53ACB3AB1D95466B005C9A61 /* qrcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrcodeViewController.h; sourceTree = "<group>"; };
 		53ACB3AC1D95466B005C9A61 /* qrcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = qrcodeViewController.m; sourceTree = "<group>"; };
+		53ACB3B21D960F6B005C9A61 /* writeimpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writeimpressViewController.h; sourceTree = "<group>"; };
+		53ACB3B31D960F6B005C9A61 /* writeimpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = writeimpressViewController.m; sourceTree = "<group>"; };
+		53ACB3B51D9651B7005C9A61 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		53ACB3B71D9651F5005C9A61 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		53ACB3B91D96520A005C9A61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		53ACB3BB1D965214005C9A61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53ACB3BD1D965223005C9A61 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		53ACB3BF1D965230005C9A61 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		53ACB3C11D96523C005C9A61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		53ACB3C31D9657BE005C9A61 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +310,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53ACB3C21D96523C005C9A61 /* QuartzCore.framework in Frameworks */,
+				53ACB3C01D965230005C9A61 /* OpenGLES.framework in Frameworks */,
+				53ACB3BE1D965223005C9A61 /* SystemConfiguration.framework in Frameworks */,
+				53ACB3BC1D965214005C9A61 /* CoreGraphics.framework in Frameworks */,
+				53ACB3BA1D96520A005C9A61 /* Security.framework in Frameworks */,
+				53ACB3B81D9651F5005C9A61 /* CoreTelephony.framework in Frameworks */,
+				53ACB3B61D9651B7005C9A61 /* libstdc++.6.0.9.tbd in Frameworks */,
 				53ACB3A61D95458C005C9A61 /* AVFoundation.framework in Frameworks */,
 				53ACB39E1D9520C1005C9A61 /* MapKit.framework in Frameworks */,
 				53ACB39C1D9520BA005C9A61 /* CoreLocation.framework in Frameworks */,
@@ -344,6 +370,7 @@
 				539DD3BC1D9371C300FBA78A /* tripmanagement行程管理 */,
 				538E2DC21D87FC1800FC55AF /* Friend好友 */,
 				530B97D31D806C2D0074454C /* impression印象 */,
+				53ACB3AE1D960F21005C9A61 /* writeimpress写印象 */,
 				530B97DA1D806C7B0074454C /* found发现 */,
 				530B97E11D806CB20074454C /* my我的 */,
 				530B97B21D8060110074454C /* newtravel */,
@@ -841,7 +868,7 @@
 			isa = PBXGroup;
 			children = (
 				539DD3B91D936FFE00FBA78A /* tripnavViewController.h */,
-				539DD3BA1D936FFE00FBA78A /* tripnavViewController.m */,
+				539DD3BA1D936FFE00FBA78A /* tripnavViewController.mm */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -894,6 +921,14 @@
 		53ACB39A1D9520B9005C9A61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53ACB3C31D9657BE005C9A61 /* mapapi.bundle */,
+				53ACB3C11D96523C005C9A61 /* QuartzCore.framework */,
+				53ACB3BF1D965230005C9A61 /* OpenGLES.framework */,
+				53ACB3BD1D965223005C9A61 /* SystemConfiguration.framework */,
+				53ACB3BB1D965214005C9A61 /* CoreGraphics.framework */,
+				53ACB3B91D96520A005C9A61 /* Security.framework */,
+				53ACB3B71D9651F5005C9A61 /* CoreTelephony.framework */,
+				53ACB3B51D9651B7005C9A61 /* libstdc++.6.0.9.tbd */,
 				53ACB3A51D95458C005C9A61 /* AVFoundation.framework */,
 				530A0F181D885E78004C28FA /* baidumap */,
 				538E2DA61D87A53800FC55AF /* fmdb */,
@@ -945,6 +980,39 @@
 			children = (
 				53ACB3AB1D95466B005C9A61 /* qrcodeViewController.h */,
 				53ACB3AC1D95466B005C9A61 /* qrcodeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		53ACB3AE1D960F21005C9A61 /* writeimpress写印象 */ = {
+			isa = PBXGroup;
+			children = (
+				53ACB3B11D960F3D005C9A61 /* Controller */,
+				53ACB3B01D960F3A005C9A61 /* View */,
+				53ACB3AF1D960F30005C9A61 /* Model */,
+			);
+			name = "writeimpress写印象";
+			sourceTree = "<group>";
+		};
+		53ACB3AF1D960F30005C9A61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53ACB3B01D960F3A005C9A61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53ACB3B11D960F3D005C9A61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53ACB3B21D960F6B005C9A61 /* writeimpressViewController.h */,
+				53ACB3B31D960F6B005C9A61 /* writeimpressViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1009,6 +1077,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530B97C31D8060110074454C /* LaunchScreen.storyboard in Resources */,
+				53ACB3C41D9657BE005C9A61 /* mapapi.bundle in Resources */,
 				538E2DBE1D87A53800FC55AF /* MBProgressHUD.bundle in Resources */,
 				530B97C01D8060110074454C /* Assets.xcassets in Resources */,
 				530B97BE1D8060110074454C /* Main.storyboard in Resources */,
@@ -1080,6 +1149,7 @@
 				5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */,
 				538E2D4C1D87A4B300FC55AF /* AFSecurityPolicy.m in Sources */,
 				539DD3CB1D937F0E00FBA78A /* manageTableViewCell3.m in Sources */,
+				53ACB3B41D960F6B005C9A61 /* writeimpressViewController.m in Sources */,
 				53970AE21D910A63004857B7 /* moretripViewController.m in Sources */,
 				53ACB3A41D9541DC005C9A61 /* bottomimageView.m in Sources */,
 				538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */,
@@ -1090,7 +1160,7 @@
 				53ACB3991D951215005C9A61 /* jinxuanimageView.m in Sources */,
 				5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */,
 				538E2DBB1D87A53800FC55AF /* FMDatabaseQueue.m in Sources */,
-				539DD3BB1D936FFE00FBA78A /* tripnavViewController.m in Sources */,
+				539DD3BB1D936FFE00FBA78A /* tripnavViewController.mm in Sources */,
 				538E2DB81D87A53800FC55AF /* FMDatabase.m in Sources */,
 				53ACB3AD1D95466B005C9A61 /* qrcodeViewController.m in Sources */,
 				530B97E01D806CA60074454C /* foundViewController.m in Sources */,

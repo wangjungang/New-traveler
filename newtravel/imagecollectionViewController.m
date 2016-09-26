@@ -35,7 +35,7 @@ static NSString *collectionview = @"imagecell";
      @{NSFontAttributeName:[UIFont systemFontOfSize:19],
        NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.view addSubview:self.bgimageview];
-    [self addTheCollectionView];
+
     
     
     self.image_arr1 = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"1-2"],[UIImage imageNamed:@"1-3"], [UIImage imageNamed:@"2-2"],[UIImage imageNamed:@"2-3"],[UIImage imageNamed:@"2-5"],[UIImage imageNamed:@"3-1"],nil];
@@ -59,6 +59,7 @@ static NSString *collectionview = @"imagecell";
 {
     [super viewWillAppear:animated];
     self.bgimageview.frame = [UIScreen mainScreen].bounds;
+    [self addTheCollectionView];
 }
 
 //创建uicollectionview
