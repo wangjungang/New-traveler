@@ -124,6 +124,12 @@
 		53E207041D9B5B3900F1F3DA /* rankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207031D9B5B3900F1F3DA /* rankingModel.m */; };
 		53E2070A1D9B6A5800F1F3DA /* addfriendimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207091D9B6A5800F1F3DA /* addfriendimageView.m */; };
 		53E207131D9B6DCF00F1F3DA /* addimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207121D9B6DCF00F1F3DA /* addimageView.m */; };
+		53E2071E1D9B924300F1F3DA /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2071D1D9B924300F1F3DA /* loginViewController.m */; };
+		53E207211D9B925C00F1F3DA /* loginupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207201D9B925C00F1F3DA /* loginupViewController.m */; };
+		53E207241D9BC19200F1F3DA /* numberimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207231D9BC19200F1F3DA /* numberimageView.m */; };
+		53E207271D9BC1A600F1F3DA /* passwordimageView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207261D9BC1A600F1F3DA /* passwordimageView1.m */; };
+		53E2072A1D9BC1B400F1F3DA /* passwordimageView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207291D9BC1B400F1F3DA /* passwordimageView2.m */; };
+		53E2072D1D9BC1C900F1F3DA /* verificationimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2072C1D9BC1C900F1F3DA /* verificationimageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -339,6 +345,18 @@
 		53E207091D9B6A5800F1F3DA /* addfriendimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addfriendimageView.m; sourceTree = "<group>"; };
 		53E207111D9B6DCF00F1F3DA /* addimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addimageView.h; sourceTree = "<group>"; };
 		53E207121D9B6DCF00F1F3DA /* addimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addimageView.m; sourceTree = "<group>"; };
+		53E2071C1D9B924300F1F3DA /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		53E2071D1D9B924300F1F3DA /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		53E2071F1D9B925C00F1F3DA /* loginupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginupViewController.h; sourceTree = "<group>"; };
+		53E207201D9B925C00F1F3DA /* loginupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginupViewController.m; sourceTree = "<group>"; };
+		53E207221D9BC19200F1F3DA /* numberimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numberimageView.h; sourceTree = "<group>"; };
+		53E207231D9BC19200F1F3DA /* numberimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = numberimageView.m; sourceTree = "<group>"; };
+		53E207251D9BC1A600F1F3DA /* passwordimageView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = passwordimageView1.h; sourceTree = "<group>"; };
+		53E207261D9BC1A600F1F3DA /* passwordimageView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = passwordimageView1.m; sourceTree = "<group>"; };
+		53E207281D9BC1B400F1F3DA /* passwordimageView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = passwordimageView2.h; sourceTree = "<group>"; };
+		53E207291D9BC1B400F1F3DA /* passwordimageView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = passwordimageView2.m; sourceTree = "<group>"; };
+		53E2072B1D9BC1C900F1F3DA /* verificationimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = verificationimageView.h; sourceTree = "<group>"; };
+		53E2072C1D9BC1C900F1F3DA /* verificationimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = verificationimageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +428,8 @@
 				530B97E11D806CB20074454C /* my我的 */,
 				53E206EE1D9A597600F1F3DA /* set设置 */,
 				538E2DC21D87FC1800FC55AF /* Friend好友 */,
+				53E207141D9B91F200F1F3DA /* login登陆 */,
+				53E207181D9B921300F1F3DA /* loginup注册 */,
 				530B97B21D8060110074454C /* newtravel */,
 				530B97B11D8060110074454C /* Products */,
 				53ACB39A1D9520B9005C9A61 /* Frameworks */,
@@ -1109,6 +1129,80 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		53E207141D9B91F200F1F3DA /* login登陆 */ = {
+			isa = PBXGroup;
+			children = (
+				53E207171D9B920D00F1F3DA /* Controller */,
+				53E207161D9B920A00F1F3DA /* View */,
+				53E207151D9B920300F1F3DA /* Model */,
+			);
+			name = "login登陆";
+			sourceTree = "<group>";
+		};
+		53E207151D9B920300F1F3DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53E207161D9B920A00F1F3DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53E207171D9B920D00F1F3DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53E2071C1D9B924300F1F3DA /* loginViewController.h */,
+				53E2071D1D9B924300F1F3DA /* loginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		53E207181D9B921300F1F3DA /* loginup注册 */ = {
+			isa = PBXGroup;
+			children = (
+				53E2071B1D9B922C00F1F3DA /* Controller */,
+				53E2071A1D9B922700F1F3DA /* View */,
+				53E207191D9B922000F1F3DA /* Model */,
+			);
+			name = "loginup注册";
+			sourceTree = "<group>";
+		};
+		53E207191D9B922000F1F3DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53E2071A1D9B922700F1F3DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53E207221D9BC19200F1F3DA /* numberimageView.h */,
+				53E207231D9BC19200F1F3DA /* numberimageView.m */,
+				53E207251D9BC1A600F1F3DA /* passwordimageView1.h */,
+				53E207261D9BC1A600F1F3DA /* passwordimageView1.m */,
+				53E207281D9BC1B400F1F3DA /* passwordimageView2.h */,
+				53E207291D9BC1B400F1F3DA /* passwordimageView2.m */,
+				53E2072B1D9BC1C900F1F3DA /* verificationimageView.h */,
+				53E2072C1D9BC1C900F1F3DA /* verificationimageView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53E2071B1D9B922C00F1F3DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53E2071F1D9B925C00F1F3DA /* loginupViewController.h */,
+				53E207201D9B925C00F1F3DA /* loginupViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1183,9 +1277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E2072A1D9BC1B400F1F3DA /* passwordimageView2.m in Sources */,
 				538E2D8D1D87A4F900FC55AF /* MASConstraint.m in Sources */,
 				538E2D9F1D87A4F900FC55AF /* UIButton+WebCache.m in Sources */,
 				538E2D9D1D87A4F900FC55AF /* SDWebImageManager.m in Sources */,
+				53E207241D9BC19200F1F3DA /* numberimageView.m in Sources */,
 				538E2D3B1D87A01300FC55AF /* WJGTabBarController.m in Sources */,
 				538E2D951D87A4F900FC55AF /* ViewController+MASAdditions.m in Sources */,
 				53E207011D9A6D7600F1F3DA /* friendlistModel.m in Sources */,
@@ -1203,6 +1299,7 @@
 				53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */,
 				53E206E41D9922D600F1F3DA /* dynamicModel.m in Sources */,
 				539DD3C51D937EF400FBA78A /* manageTableViewCell1.m in Sources */,
+				53E207271D9BC1A600F1F3DA /* passwordimageView1.m in Sources */,
 				538E2D991D87A4F900FC55AF /* SDWebImageCompat.m in Sources */,
 				53E207041D9B5B3900F1F3DA /* rankingModel.m in Sources */,
 				538E2D4F1D87A4B300FC55AF /* AFURLSessionManager.m in Sources */,
@@ -1241,6 +1338,7 @@
 				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,
 				53763D581D927DF200A5C804 /* imagecollectionViewController.m in Sources */,
 				538E2D921D87A4F900FC55AF /* NSArray+MASAdditions.m in Sources */,
+				53E207211D9B925C00F1F3DA /* loginupViewController.m in Sources */,
 				530B97B51D8060110074454C /* main.m in Sources */,
 				538E2D9A1D87A4F900FC55AF /* SDWebImageDecoder.m in Sources */,
 				538E2D911D87A4F900FC55AF /* MASViewConstraint.m in Sources */,
@@ -1257,6 +1355,8 @@
 				53ACB3A41D9541DC005C9A61 /* bottomimageView.m in Sources */,
 				538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */,
 				538E2D8F1D87A4F900FC55AF /* MASLayoutConstraint.m in Sources */,
+				53E2072D1D9BC1C900F1F3DA /* verificationimageView.m in Sources */,
+				53E2071E1D9B924300F1F3DA /* loginViewController.m in Sources */,
 				538E2D9E1D87A4F900FC55AF /* SDWebImagePrefetcher.m in Sources */,
 				538E2D961D87A4F900FC55AF /* MKAnnotationView+WebCache.m in Sources */,
 				538E2DA01D87A4F900FC55AF /* UIImage+GIF.m in Sources */,

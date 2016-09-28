@@ -19,10 +19,10 @@
 #import "imagecollectionViewController.h"
 #import "tripnavViewController.h"
 #import "tripmanageViewController.h"
-
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "qrcodeViewController.h"
+#import "loginViewController.h"
 static NSString *kcellname = @"name1";
 @interface mainViewController ()<UITextFieldDelegate,UIScrollViewDelegate,UIScrollViewAccessibilityDelegate,CLLocationManagerDelegate,MKMapViewDelegate>
 {
@@ -50,8 +50,9 @@ static NSString *kcellname = @"name1";
 @property(strong,nonatomic) CLGeocoder *myGeocoder;
 @property(strong,nonatomic) CLLocation *myLocation;
 
-@property (nonatomic , strong)CLLocationManager *locationManager;
+@property (nonatomic,strong)CLLocationManager *locationManager;
 
+@property (nonatomic,strong) UIButton *loginbtn;
 @end
 
 @implementation mainViewController
@@ -86,7 +87,7 @@ static NSString *kcellname = @"name1";
     
     [self leftpop];
     [self.view addSubview:self.addresstableView];
-    
+    [self.view addSubview:self.loginbtn];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -139,6 +140,8 @@ static NSString *kcellname = @"name1";
     }];
    // self.addresstableView.frame = CGRectMake(20, 64-150, 60, 150);
     self.addresstableView.frame = CGRectMake(0, 0-250, UIScreenWidth, 250);
+    
+    self.loginbtn.frame = CGRectMake(UIScreenWidth-200, UIScreenHeight-250, 100, 100);
 }
 
 #pragma mark - getters
@@ -246,6 +249,18 @@ static NSString *kcellname = @"name1";
     return _addresstableView;
 }
 
+-(UIButton *)loginbtn
+{
+    if(!_loginbtn)
+    {
+        _loginbtn = [[UIButton alloc] init];
+        [_loginbtn setTitle:@"登陆" forState:UIControlStateNormal];
+        [_loginbtn addTarget:self action:@selector(logininbtnclick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loginbtn;
+}
+
+
 #pragma mark - 实现方法
 
 -(void)nextpus2
@@ -326,6 +341,14 @@ static NSString *kcellname = @"name1";
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+-(void)logininbtnclick
+{
+    loginViewController *longinVC = [[loginViewController alloc] init];
+    [self presentViewController:longinVC animated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark - UITableView DataSource
