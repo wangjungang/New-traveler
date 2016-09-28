@@ -2,9 +2,10 @@
 //  addimageView.h
 //  newtravel
 //
-//  Created by 王俊钢 on 16/9/23.
+//  Created by 王俊钢 on 16/9/28.
 //  Copyright © 2016年 wangjungang. All rights reserved.
 //
+
 
 #import <UIKit/UIKit.h>
 
@@ -16,3 +17,4 @@
 @property (nonatomic,strong) UIButton *btn5;
 @property (nonatomic,strong) UIButton *closebtn;
 @end
+

@@ -95,7 +95,6 @@
 		539DD3C81D937F0100FBA78A /* manageTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3C71D937F0100FBA78A /* manageTableViewCell2.m */; };
 		539DD3CB1D937F0E00FBA78A /* manageTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 539DD3CA1D937F0E00FBA78A /* manageTableViewCell3.m */; };
 		53ACB3931D94D25D005C9A61 /* dialimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3921D94D25D005C9A61 /* dialimageView.m */; };
-		53ACB3961D94D84C005C9A61 /* addimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3951D94D84C005C9A61 /* addimageView.m */; };
 		53ACB3991D951215005C9A61 /* jinxuanimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACB3981D951215005C9A61 /* jinxuanimageView.m */; };
 		53ACB39C1D9520BA005C9A61 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB39B1D9520BA005C9A61 /* CoreLocation.framework */; };
 		53ACB39E1D9520C1005C9A61 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB39D1D9520C1005C9A61 /* MapKit.framework */; };
@@ -112,6 +111,19 @@
 		53ACB3C01D965230005C9A61 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3BF1D965230005C9A61 /* OpenGLES.framework */; };
 		53ACB3C21D96523C005C9A61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ACB3C11D96523C005C9A61 /* QuartzCore.framework */; };
 		53ACB3C41D9657BE005C9A61 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53ACB3C31D9657BE005C9A61 /* mapapi.bundle */; };
+		53E206E11D9901E600F1F3DA /* dynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206E01D9901E600F1F3DA /* dynamicTableViewCell.m */; };
+		53E206E41D9922D600F1F3DA /* dynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206E31D9922D600F1F3DA /* dynamicModel.m */; };
+		53E206E71D9A068600F1F3DA /* foundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206E61D9A068600F1F3DA /* foundTableViewCell.m */; };
+		53E206EA1D9A122A00F1F3DA /* foundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206E91D9A122A00F1F3DA /* foundModel.m */; };
+		53E206ED1D9A1AFD00F1F3DA /* myinfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206EC1D9A1AFD00F1F3DA /* myinfoTableViewCell.m */; };
+		53E206F41D9A59A200F1F3DA /* setViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206F31D9A59A200F1F3DA /* setViewController.m */; };
+		53E206F71D9A5B7100F1F3DA /* myinfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206F61D9A5B7100F1F3DA /* myinfoModel.m */; };
+		53E206FB1D9A6B9100F1F3DA /* friendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206FA1D9A6B9100F1F3DA /* friendTableViewCell.m */; };
+		53E206FE1D9A6BA100F1F3DA /* rankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E206FD1D9A6BA100F1F3DA /* rankingTableViewCell.m */; };
+		53E207011D9A6D7600F1F3DA /* friendlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207001D9A6D7600F1F3DA /* friendlistModel.m */; };
+		53E207041D9B5B3900F1F3DA /* rankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207031D9B5B3900F1F3DA /* rankingModel.m */; };
+		53E2070A1D9B6A5800F1F3DA /* addfriendimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207091D9B6A5800F1F3DA /* addfriendimageView.m */; };
+		53E207131D9B6DCF00F1F3DA /* addimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E207121D9B6DCF00F1F3DA /* addimageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -280,8 +292,6 @@
 		539DD3CA1D937F0E00FBA78A /* manageTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageTableViewCell3.m; sourceTree = "<group>"; };
 		53ACB3911D94D25D005C9A61 /* dialimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dialimageView.h; sourceTree = "<group>"; };
 		53ACB3921D94D25D005C9A61 /* dialimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dialimageView.m; sourceTree = "<group>"; };
-		53ACB3941D94D84C005C9A61 /* addimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addimageView.h; sourceTree = "<group>"; };
-		53ACB3951D94D84C005C9A61 /* addimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addimageView.m; sourceTree = "<group>"; };
 		53ACB3971D951215005C9A61 /* jinxuanimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jinxuanimageView.h; sourceTree = "<group>"; };
 		53ACB3981D951215005C9A61 /* jinxuanimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jinxuanimageView.m; sourceTree = "<group>"; };
 		53ACB39B1D9520BA005C9A61 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -303,6 +313,32 @@
 		53ACB3BF1D965230005C9A61 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		53ACB3C11D96523C005C9A61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		53ACB3C31D9657BE005C9A61 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		53E206DF1D9901E600F1F3DA /* dynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamicTableViewCell.h; sourceTree = "<group>"; };
+		53E206E01D9901E600F1F3DA /* dynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dynamicTableViewCell.m; sourceTree = "<group>"; };
+		53E206E21D9922D600F1F3DA /* dynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamicModel.h; sourceTree = "<group>"; };
+		53E206E31D9922D600F1F3DA /* dynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dynamicModel.m; sourceTree = "<group>"; };
+		53E206E51D9A068600F1F3DA /* foundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = foundTableViewCell.h; sourceTree = "<group>"; };
+		53E206E61D9A068600F1F3DA /* foundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foundTableViewCell.m; sourceTree = "<group>"; };
+		53E206E81D9A122A00F1F3DA /* foundModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = foundModel.h; sourceTree = "<group>"; };
+		53E206E91D9A122A00F1F3DA /* foundModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foundModel.m; sourceTree = "<group>"; };
+		53E206EB1D9A1AFD00F1F3DA /* myinfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myinfoTableViewCell.h; sourceTree = "<group>"; };
+		53E206EC1D9A1AFD00F1F3DA /* myinfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myinfoTableViewCell.m; sourceTree = "<group>"; };
+		53E206F21D9A59A200F1F3DA /* setViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setViewController.h; sourceTree = "<group>"; };
+		53E206F31D9A59A200F1F3DA /* setViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setViewController.m; sourceTree = "<group>"; };
+		53E206F51D9A5B7100F1F3DA /* myinfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myinfoModel.h; sourceTree = "<group>"; };
+		53E206F61D9A5B7100F1F3DA /* myinfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myinfoModel.m; sourceTree = "<group>"; };
+		53E206F91D9A6B9100F1F3DA /* friendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friendTableViewCell.h; sourceTree = "<group>"; };
+		53E206FA1D9A6B9100F1F3DA /* friendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendTableViewCell.m; sourceTree = "<group>"; };
+		53E206FC1D9A6BA100F1F3DA /* rankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rankingTableViewCell.h; sourceTree = "<group>"; };
+		53E206FD1D9A6BA100F1F3DA /* rankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rankingTableViewCell.m; sourceTree = "<group>"; };
+		53E206FF1D9A6D7600F1F3DA /* friendlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friendlistModel.h; sourceTree = "<group>"; };
+		53E207001D9A6D7600F1F3DA /* friendlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = friendlistModel.m; sourceTree = "<group>"; };
+		53E207021D9B5B3900F1F3DA /* rankingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rankingModel.h; sourceTree = "<group>"; };
+		53E207031D9B5B3900F1F3DA /* rankingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rankingModel.m; sourceTree = "<group>"; };
+		53E207081D9B6A5800F1F3DA /* addfriendimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addfriendimageView.h; sourceTree = "<group>"; };
+		53E207091D9B6A5800F1F3DA /* addfriendimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addfriendimageView.m; sourceTree = "<group>"; };
+		53E207111D9B6DCF00F1F3DA /* addimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addimageView.h; sourceTree = "<group>"; };
+		53E207121D9B6DCF00F1F3DA /* addimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addimageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,11 +404,12 @@
 				53763D521D927BBD00A5C804 /* Imagecollection图集 */,
 				539DD3B51D936FBC00FBA78A /* tripnavigation行程导航 */,
 				539DD3BC1D9371C300FBA78A /* tripmanagement行程管理 */,
-				538E2DC21D87FC1800FC55AF /* Friend好友 */,
 				530B97D31D806C2D0074454C /* impression印象 */,
 				53ACB3AE1D960F21005C9A61 /* writeimpress写印象 */,
 				530B97DA1D806C7B0074454C /* found发现 */,
 				530B97E11D806CB20074454C /* my我的 */,
+				53E206EE1D9A597600F1F3DA /* set设置 */,
+				538E2DC21D87FC1800FC55AF /* Friend好友 */,
 				530B97B21D8060110074454C /* newtravel */,
 				530B97B11D8060110074454C /* Products */,
 				53ACB39A1D9520B9005C9A61 /* Frameworks */,
@@ -514,6 +551,10 @@
 		530B97DB1D806C8E0074454C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53E206E21D9922D600F1F3DA /* dynamicModel.h */,
+				53E206E31D9922D600F1F3DA /* dynamicModel.m */,
+				53E206E81D9A122A00F1F3DA /* foundModel.h */,
+				53E206E91D9A122A00F1F3DA /* foundModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -521,6 +562,10 @@
 		530B97DC1D806C930074454C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53E206DF1D9901E600F1F3DA /* dynamicTableViewCell.h */,
+				53E206E01D9901E600F1F3DA /* dynamicTableViewCell.m */,
+				53E206E51D9A068600F1F3DA /* foundTableViewCell.h */,
+				53E206E61D9A068600F1F3DA /* foundTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -547,6 +592,8 @@
 		530B97E21D806CC40074454C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53E206F51D9A5B7100F1F3DA /* myinfoModel.h */,
+				53E206F61D9A5B7100F1F3DA /* myinfoModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -554,6 +601,8 @@
 		530B97E31D806CCB0074454C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53E206EB1D9A1AFD00F1F3DA /* myinfoTableViewCell.h */,
+				53E206EC1D9A1AFD00F1F3DA /* myinfoTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -750,6 +799,10 @@
 		538E2DC31D87FC2F00FC55AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53E206FF1D9A6D7600F1F3DA /* friendlistModel.h */,
+				53E207001D9A6D7600F1F3DA /* friendlistModel.m */,
+				53E207021D9B5B3900F1F3DA /* rankingModel.h */,
+				53E207031D9B5B3900F1F3DA /* rankingModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -757,6 +810,12 @@
 		538E2DC41D87FC3400FC55AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53E206F91D9A6B9100F1F3DA /* friendTableViewCell.h */,
+				53E206FA1D9A6B9100F1F3DA /* friendTableViewCell.m */,
+				53E206FC1D9A6BA100F1F3DA /* rankingTableViewCell.h */,
+				53E206FD1D9A6BA100F1F3DA /* rankingTableViewCell.m */,
+				53E207081D9B6A5800F1F3DA /* addfriendimageView.h */,
+				53E207091D9B6A5800F1F3DA /* addfriendimageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -901,8 +960,8 @@
 				539DD3CA1D937F0E00FBA78A /* manageTableViewCell3.m */,
 				53ACB3911D94D25D005C9A61 /* dialimageView.h */,
 				53ACB3921D94D25D005C9A61 /* dialimageView.m */,
-				53ACB3941D94D84C005C9A61 /* addimageView.h */,
-				53ACB3951D94D84C005C9A61 /* addimageView.m */,
+				53E207111D9B6DCF00F1F3DA /* addimageView.h */,
+				53E207121D9B6DCF00F1F3DA /* addimageView.m */,
 				53ACB3971D951215005C9A61 /* jinxuanimageView.h */,
 				53ACB3981D951215005C9A61 /* jinxuanimageView.m */,
 			);
@@ -1017,6 +1076,39 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		53E206EE1D9A597600F1F3DA /* set设置 */ = {
+			isa = PBXGroup;
+			children = (
+				53E206F11D9A599200F1F3DA /* Controller */,
+				53E206F01D9A598E00F1F3DA /* View */,
+				53E206EF1D9A598800F1F3DA /* Model */,
+			);
+			name = "set设置";
+			sourceTree = "<group>";
+		};
+		53E206EF1D9A598800F1F3DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		53E206F01D9A598E00F1F3DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53E206F11D9A599200F1F3DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53E206F21D9A59A200F1F3DA /* setViewController.h */,
+				53E206F31D9A59A200F1F3DA /* setViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1096,18 +1188,23 @@
 				538E2D9D1D87A4F900FC55AF /* SDWebImageManager.m in Sources */,
 				538E2D3B1D87A01300FC55AF /* WJGTabBarController.m in Sources */,
 				538E2D951D87A4F900FC55AF /* ViewController+MASAdditions.m in Sources */,
+				53E207011D9A6D7600F1F3DA /* friendlistModel.m in Sources */,
 				538E2DB91D87A53800FC55AF /* FMDatabaseAdditions.m in Sources */,
 				530B97D91D806C640074454C /* impressionViewController.m in Sources */,
 				53ACB3A11D9525F5005C9A61 /* impressTableViewCell.m in Sources */,
 				538E2DBF1D87A53800FC55AF /* MBProgressHUD.m in Sources */,
+				53E206ED1D9A1AFD00F1F3DA /* myinfoTableViewCell.m in Sources */,
 				538E2DC81D87FC5000FC55AF /* friendViewController.m in Sources */,
 				538E2D9B1D87A4F900FC55AF /* SDWebImageDownloader.m in Sources */,
 				539DD3C21D9373B100FBA78A /* tripmanageViewController.m in Sources */,
+				53E207131D9B6DCF00F1F3DA /* addimageView.m in Sources */,
 				538E2DBA1D87A53800FC55AF /* FMDatabasePool.m in Sources */,
 				538E2D4B1D87A4B300FC55AF /* AFNetworkReachabilityManager.m in Sources */,
 				53970AEC1D911B47004857B7 /* travelitViewController.m in Sources */,
+				53E206E41D9922D600F1F3DA /* dynamicModel.m in Sources */,
 				539DD3C51D937EF400FBA78A /* manageTableViewCell1.m in Sources */,
 				538E2D991D87A4F900FC55AF /* SDWebImageCompat.m in Sources */,
+				53E207041D9B5B3900F1F3DA /* rankingModel.m in Sources */,
 				538E2D4F1D87A4B300FC55AF /* AFURLSessionManager.m in Sources */,
 				538E2D8C1D87A4F900FC55AF /* MASCompositeConstraint.m in Sources */,
 				538E2D4D1D87A4B300FC55AF /* AFURLRequestSerialization.m in Sources */,
@@ -1124,23 +1221,26 @@
 				538E2DA11D87A4F900FC55AF /* UIImage+MultiFormat.m in Sources */,
 				538E2D9C1D87A4F900FC55AF /* SDWebImageDownloaderOperation.m in Sources */,
 				538E2D901D87A4F900FC55AF /* MASViewAttribute.m in Sources */,
+				53E206E71D9A068600F1F3DA /* foundTableViewCell.m in Sources */,
 				539DD3C81D937F0100FBA78A /* manageTableViewCell2.m in Sources */,
 				53970AE51D910FC9004857B7 /* tableView.m in Sources */,
 				538E2DBC1D87A53800FC55AF /* FMResultSet.m in Sources */,
 				538E2DA31D87A4F900FC55AF /* UIImageView+HighlightedWebCache.m in Sources */,
+				53E206EA1D9A122A00F1F3DA /* foundModel.m in Sources */,
 				538E2D4E1D87A4B300FC55AF /* AFURLResponseSerialization.m in Sources */,
 				53ACB3931D94D25D005C9A61 /* dialimageView.m in Sources */,
+				53E206F71D9A5B7100F1F3DA /* myinfoModel.m in Sources */,
 				538E2D931D87A4F900FC55AF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5310351E1D92D96B0079E517 /* MyHeadView.m in Sources */,
 				538E2DBD1D87A53800FC55AF /* MBProgressHUD+XMG.m in Sources */,
 				538E2D4A1D87A4B300FC55AF /* AFHTTPSessionManager.m in Sources */,
 				535E42671D91523700570A07 /* addtripimageView.m in Sources */,
+				53E2070A1D9B6A5800F1F3DA /* addfriendimageView.m in Sources */,
 				530B97BB1D8060110074454C /* ViewController.m in Sources */,
 				538E2D971D87A4F900FC55AF /* NSData+ImageContentType.m in Sources */,
 				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,
 				53763D581D927DF200A5C804 /* imagecollectionViewController.m in Sources */,
 				538E2D921D87A4F900FC55AF /* NSArray+MASAdditions.m in Sources */,
-				53ACB3961D94D84C005C9A61 /* addimageView.m in Sources */,
 				530B97B51D8060110074454C /* main.m in Sources */,
 				538E2D9A1D87A4F900FC55AF /* SDWebImageDecoder.m in Sources */,
 				538E2D911D87A4F900FC55AF /* MASViewConstraint.m in Sources */,
@@ -1150,6 +1250,9 @@
 				538E2D4C1D87A4B300FC55AF /* AFSecurityPolicy.m in Sources */,
 				539DD3CB1D937F0E00FBA78A /* manageTableViewCell3.m in Sources */,
 				53ACB3B41D960F6B005C9A61 /* writeimpressViewController.m in Sources */,
+				53E206FE1D9A6BA100F1F3DA /* rankingTableViewCell.m in Sources */,
+				53E206E11D9901E600F1F3DA /* dynamicTableViewCell.m in Sources */,
+				53E206F41D9A59A200F1F3DA /* setViewController.m in Sources */,
 				53970AE21D910A63004857B7 /* moretripViewController.m in Sources */,
 				53ACB3A41D9541DC005C9A61 /* bottomimageView.m in Sources */,
 				538E2DCB1D88072200FC55AF /* tripimageView.m in Sources */,
@@ -1159,6 +1262,7 @@
 				538E2DA01D87A4F900FC55AF /* UIImage+GIF.m in Sources */,
 				53ACB3991D951215005C9A61 /* jinxuanimageView.m in Sources */,
 				5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */,
+				53E206FB1D9A6B9100F1F3DA /* friendTableViewCell.m in Sources */,
 				538E2DBB1D87A53800FC55AF /* FMDatabaseQueue.m in Sources */,
 				539DD3BB1D936FFE00FBA78A /* tripnavViewController.mm in Sources */,
 				538E2DB81D87A53800FC55AF /* FMDatabase.m in Sources */,

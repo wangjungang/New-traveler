@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface jinxuanimageView : UIImageView
-
+@property (nonatomic,strong) UILabel *m_label;
 @end

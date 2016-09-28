@@ -84,9 +84,9 @@
     UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textremove)];
     [self.view addGestureRecognizer:singleTap1];
     
-    mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 64+60, UIScreenWidth, UIScreenWidth)];
+    mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 64+80, UIScreenWidth, UIScreenWidth-20)];
     [self.view addSubview:mapView];
-//
+
     mapView.delegate = self;                            //设置代理
     mapView.showsUserLocation = YES;                //设置为可以显示用户位置
     // CLLocationCoordinate2D coordinate;                  //设定经纬度
@@ -147,12 +147,59 @@
 
 #pragma mark - getters
 
+
+-(UILabel *)startCityLabel
+{
+    if(!_startCityLabel)
+    {
+        _startCityLabel = [[UILabel alloc] init];
+        _startCityLabel.text = @"开始城市";
+        _startCityLabel.adjustsFontSizeToFitWidth = YES;
+    }
+    return _startCityLabel;
+}
+
+-(UILabel *)startAddLabel
+{
+    if(!_startAddLabel)
+    {
+        _startAddLabel = [[UILabel alloc] init];
+        _startAddLabel.text = @"开始地点";
+        _startAddLabel.adjustsFontSizeToFitWidth = YES;
+    }
+    return _startAddLabel;
+}
+
+-(UILabel *)endCityLabel
+{
+    if(!_endCityLabel)
+    {
+        _endCityLabel = [[UILabel alloc] init];
+        _endCityLabel.text = @"目的城市";
+        _endCityLabel.adjustsFontSizeToFitWidth = YES;
+    }
+    return _endCityLabel;
+}
+
+-(UILabel *)endAddLabel
+{
+    if(!_endAddLabel)
+    {
+        _endAddLabel = [[UILabel alloc] init];
+        _endAddLabel.text = @"目的终点";
+        _endAddLabel.adjustsFontSizeToFitWidth = YES;
+    }
+    return _endAddLabel;
+}
+
 -(UITextField *)startCityText
 {
     if(!_startCityText)
     {
         _startCityText = [[UITextField alloc] init];
         _startCityText.delegate = self;
+        _startCityText.layer.masksToBounds = YES;
+        _startCityText.layer.cornerRadius = 6;
         _startCityText.text = @"北京";
         _startCityText.backgroundColor = UIColorFromRGB(0X27A18E);
     }
@@ -165,6 +212,8 @@
     {
         _startAddText = [[UITextField alloc] init];
         _startAddText.delegate = self;
+        _startAddText.layer.masksToBounds = YES;
+        _startAddText.layer.cornerRadius =6;
         _startAddText.text = @"天安门";
         _startAddText.backgroundColor = UIColorFromRGB(0X27A18E);
     }
@@ -177,6 +226,8 @@
     {
         _endCityText = [[UITextField alloc] init];
         _endCityText.delegate = self;
+        _endCityText.layer.masksToBounds = YES;
+        _endCityText.layer.cornerRadius = 6;
         _endCityText.text = @"北京";
         _endCityText.backgroundColor = UIColorFromRGB(0X27A18E);
     }
@@ -189,6 +240,8 @@
     {
         _endAddrText = [[UITextField alloc] init];
         _endAddrText.delegate = self;
+        _endAddrText.layer.masksToBounds = YES;
+        _endAddrText.layer.cornerRadius = 6;
         _endAddrText.text = @"百度大厦";
         _endAddrText.backgroundColor = UIColorFromRGB(0X27A18E);
     }
@@ -264,10 +317,10 @@
     _locService.delegate = self;
     _routesearch.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
 
-    self.startCityText.frame = CGRectMake(10, 64, 80, 50);
-    self.startAddText.frame = CGRectMake(100, 64, 80, 50);
-    self.endCityText.frame = CGRectMake(200, 64, 80, 50);
-    self.endAddrText.frame = CGRectMake(300, 64, 80, 50);
+    self.startCityText.frame = CGRectMake(20, 104, UIScreenWidth/4-20, 30);
+    self.startAddText.frame = CGRectMake(UIScreenWidth/4-10+20, 104, UIScreenWidth/4-20, 30);
+    self.endCityText.frame = CGRectMake(UIScreenWidth/2, 104, UIScreenWidth/4-20, 30);
+    self.endAddrText.frame = CGRectMake(UIScreenWidth/4-10+UIScreenWidth/2, 104, UIScreenWidth/4-20, 30);
     
     
     self.walkbtn.frame = CGRectMake(20, UIScreenHeight-160, UIScreenWidth/4-20 , 50);
@@ -276,6 +329,14 @@
     self.busbtn.frame = CGRectMake(UIScreenWidth/4-10+UIScreenWidth/2, UIScreenHeight-160, UIScreenWidth/4-20, 50);
     
     self.cancelbtn.frame = CGRectMake(40, UIScreenHeight-98, UIScreenWidth-80, 35);
+    
+    self.startCityLabel.frame = CGRectMake(20, 74, UIScreenWidth/4-20, 30);
+    self.startAddLabel.frame = CGRectMake(UIScreenWidth/4-10+20, 74, UIScreenWidth/4-20, 30);
+    self.endCityLabel.frame = CGRectMake(UIScreenWidth/2, 74, UIScreenWidth/4-20, 30);
+    self.endAddLabel.frame = CGRectMake(UIScreenWidth/4-10+UIScreenWidth/2, 74, UIScreenWidth/4-20, 30);
+
+    
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -944,6 +1005,8 @@
 -(void)cancelbtnclick
 {
     [mapView setShowsUserLocation:YES];//显示定位的蓝点儿
+    [self Click];
+    [self follow];
 }
 
 @end

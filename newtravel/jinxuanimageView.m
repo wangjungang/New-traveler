@@ -8,7 +8,7 @@
 
 #import "jinxuanimageView.h"
 @interface jinxuanimageView()
-@property (nonatomic,strong) UILabel *m_label;
+
 @end
 @implementation jinxuanimageView
 - (instancetype)initWithFrame:(CGRect)frame
