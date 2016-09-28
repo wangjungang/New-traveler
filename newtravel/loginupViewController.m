@@ -249,10 +249,7 @@
         
         
         if (!error) {
-            
             [MBProgressHUD showSuccess:@"验证成功"];
-            
-          
             
         }else{
             NSLog(@"验证失败:%@",error);
@@ -260,8 +257,6 @@
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             [MBProgressHUD showError:@"注册失败，请检查输入"];
         }
-
-        
     }];
     
 }

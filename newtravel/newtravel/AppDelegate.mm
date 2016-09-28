@@ -62,7 +62,9 @@ BMKMapManager* _mapManager;
     if (!ret) {
         NSLog(@"manager start failed!");
     }
-    
+    //初始化应用，appKey和appSecret从后台申请得
+    [SMSSDK registerApp:@"17126b7d77175" withSecret:@"9cfdae21717a74754e09697477a34ebe"];
+
     return YES;
 }
 
