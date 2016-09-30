@@ -10,7 +10,7 @@
 #import "imageCollectionViewCell.h"
 #import "MyHeadView.h"
 #import "MyFootView.h"
-@interface imagecollectionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,imageCollectionCellDelegate,UICollectionViewDelegateFlowLayout>
+@interface imagecollectionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 {
      BOOL isEdit;
 }
@@ -36,7 +36,7 @@ static NSString *collectionview = @"imagecell";
        NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.view addSubview:self.bgimageview];
 
-    
+    [self addTheCollectionView];
     
     self.image_arr1 = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"1-2"],[UIImage imageNamed:@"1-3"], [UIImage imageNamed:@"2-2"],[UIImage imageNamed:@"2-3"],[UIImage imageNamed:@"2-5"],[UIImage imageNamed:@"3-1"],nil];
     self.image_arr2 = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"1-2"],[UIImage imageNamed:@"1-3"], [UIImage imageNamed:@"2-2"],[UIImage imageNamed:@"2-3"],[UIImage imageNamed:@"2-5"],[UIImage imageNamed:@"3-1"],nil];
@@ -59,7 +59,7 @@ static NSString *collectionview = @"imagecell";
 {
     [super viewWillAppear:animated];
     self.bgimageview.frame = [UIScreen mainScreen].bounds;
-    [self addTheCollectionView];
+    
 }
 
 //创建uicollectionview
@@ -105,7 +105,6 @@ static NSString *collectionview = @"imagecell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     _cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionview forIndexPath:indexPath];
-    _cell.delegate = self;
     [_cell releaseView];
 //    if(isEdit==YES){
 //        [_cell changeView];
@@ -149,7 +148,7 @@ static NSString *collectionview = @"imagecell";
 {
     //        UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     //        cell.backgroundColor = [UIColor redColor];
-    NSLog(@"选择%ld",indexPath.row);
+    NSLog(@"选择%ld",(long)indexPath.row);
 }
 //返回这个UICollectionView是否可以被选择
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath

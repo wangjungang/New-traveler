@@ -63,7 +63,7 @@
     pageConteol.tag = 201;
     
     [self.view addSubview:_scrollView];
-    [self.view addSubview: pageConteol];
+   // [self.view addSubview: pageConteol];
 }
 #pragma mark - UIScrollViewDelegate
 
@@ -83,6 +83,7 @@
         [self scrollViewDisappear];
     }
 }
+
 -(void)scrollViewDisappear{
     
     

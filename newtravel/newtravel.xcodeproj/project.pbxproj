@@ -28,6 +28,8 @@
 		531035211D92D9A00079E517 /* MyFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531035201D92D9A00079E517 /* MyFootView.m */; };
 		5310FB0A1D8FC7ED00F855FE /* pictripimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310FB091D8FC7ED00F855FE /* pictripimageView.m */; };
 		5310FB0D1D8FD5AF00F855FE /* navigationimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310FB0C1D8FD5AF00F855FE /* navigationimageView.m */; };
+		531677201D9DF1B900D0494B /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316771F1D9DF1B900D0494B /* APIClient.m */; };
+		531677231D9DF51E00D0494B /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 531677221D9DF51E00D0494B /* HttpTool.m */; };
 		5358F32E1D870200003213C0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F32D1D870200003213C0 /* libz.tbd */; };
 		5358F3301D870211003213C0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F32F1D870211003213C0 /* libicucore.tbd */; };
 		5358F3321D870220003213C0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5358F3311D870220003213C0 /* MessageUI.framework */; };
@@ -166,6 +168,10 @@
 		5310FB091D8FC7ED00F855FE /* pictripimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pictripimageView.m; sourceTree = "<group>"; };
 		5310FB0B1D8FD5AF00F855FE /* navigationimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navigationimageView.h; sourceTree = "<group>"; };
 		5310FB0C1D8FD5AF00F855FE /* navigationimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navigationimageView.m; sourceTree = "<group>"; };
+		5316771E1D9DF1B900D0494B /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		5316771F1D9DF1B900D0494B /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		531677211D9DF51E00D0494B /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		531677221D9DF51E00D0494B /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		5358F32D1D870200003213C0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5358F32F1D870211003213C0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		5358F3311D870220003213C0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -415,21 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				530B97CB1D8065BD0074454C /* Other */,
-				530B97CC1D8065DA0074454C /* Main首页 */,
-				53ACB3A71D954598005C9A61 /* Qrcode二维码 */,
-				53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */,
-				53970ADC1D910A0F004857B7 /* moretrip更多行程 */,
-				53763D521D927BBD00A5C804 /* Imagecollection图集 */,
-				539DD3B51D936FBC00FBA78A /* tripnavigation行程导航 */,
-				539DD3BC1D9371C300FBA78A /* tripmanagement行程管理 */,
-				530B97D31D806C2D0074454C /* impression印象 */,
-				53ACB3AE1D960F21005C9A61 /* writeimpress写印象 */,
-				530B97DA1D806C7B0074454C /* found发现 */,
-				530B97E11D806CB20074454C /* my我的 */,
-				53E206EE1D9A597600F1F3DA /* set设置 */,
-				538E2DC21D87FC1800FC55AF /* Friend好友 */,
-				53E207141D9B91F200F1F3DA /* login登陆 */,
-				53E207181D9B921300F1F3DA /* loginup注册 */,
 				530B97B21D8060110074454C /* newtravel */,
 				530B97B11D8060110074454C /* Products */,
 				53ACB39A1D9520B9005C9A61 /* Frameworks */,
@@ -447,6 +438,22 @@
 		530B97B21D8060110074454C /* newtravel */ = {
 			isa = PBXGroup;
 			children = (
+				530B97CC1D8065DA0074454C /* Main首页 */,
+				53ACB3A71D954598005C9A61 /* Qrcode二维码 */,
+				53970AE61D911B02004857B7 /* Travelitinerary旅行行程 */,
+				53970ADC1D910A0F004857B7 /* moretrip更多行程 */,
+				53763D521D927BBD00A5C804 /* Imagecollection图集 */,
+				539DD3B51D936FBC00FBA78A /* tripnavigation行程导航 */,
+				539DD3BC1D9371C300FBA78A /* tripmanagement行程管理 */,
+				530B97D31D806C2D0074454C /* impression印象 */,
+				53ACB3AE1D960F21005C9A61 /* writeimpress写印象 */,
+				530B97DA1D806C7B0074454C /* found发现 */,
+				530B97E11D806CB20074454C /* my我的 */,
+				53E206EE1D9A597600F1F3DA /* set设置 */,
+				538E2DC21D87FC1800FC55AF /* Friend好友 */,
+				53E207141D9B91F200F1F3DA /* login登陆 */,
+				53E207181D9B921300F1F3DA /* loginup注册 */,
+				5316771D1D9DF15000D0494B /* webdata */,
 				530B97B31D8060110074454C /* Supporting Files */,
 			);
 			path = newtravel;
@@ -486,6 +493,7 @@
 				530B97CD1D8066150074454C /* Model */,
 			);
 			name = "Main首页";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		530B97CD1D8066150074454C /* Model */ = {
@@ -529,6 +537,7 @@
 				530B97D41D806C4B0074454C /* Model */,
 			);
 			name = "impression印象";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		530B97D41D806C4B0074454C /* Model */ = {
@@ -566,6 +575,7 @@
 				530B97DB1D806C8E0074454C /* Model */,
 			);
 			name = "found发现";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		530B97DB1D806C8E0074454C /* Model */ = {
@@ -607,6 +617,7 @@
 				530B97E21D806CC40074454C /* Model */,
 			);
 			name = "my我的";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		530B97E21D806CC40074454C /* Model */ = {
@@ -636,6 +647,18 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		5316771D1D9DF15000D0494B /* webdata */ = {
+			isa = PBXGroup;
+			children = (
+				5316771E1D9DF1B900D0494B /* APIClient.h */,
+				5316771F1D9DF1B900D0494B /* APIClient.m */,
+				531677211D9DF51E00D0494B /* HttpTool.h */,
+				531677221D9DF51E00D0494B /* HttpTool.m */,
+			);
+			name = webdata;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5358F3371D870251003213C0 /* SMS_SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +676,7 @@
 				53763D531D927DC700A5C804 /* Model */,
 			);
 			name = "Imagecollection图集";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53763D531D927DC700A5C804 /* Model */ = {
@@ -814,6 +838,7 @@
 				538E2DC31D87FC2F00FC55AF /* Model */,
 			);
 			name = "Friend好友";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		538E2DC31D87FC2F00FC55AF /* Model */ = {
@@ -857,6 +882,7 @@
 				53970ADD1D910A25004857B7 /* Model */,
 			);
 			name = "moretrip更多行程";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53970ADD1D910A25004857B7 /* Model */ = {
@@ -894,6 +920,7 @@
 				53970AE71D911B28004857B7 /* Model */,
 			);
 			name = "Travelitinerary旅行行程";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53970AE71D911B28004857B7 /* Model */ = {
@@ -927,6 +954,7 @@
 				539DD3B61D936FDF00FBA78A /* Model */,
 			);
 			name = "tripnavigation行程导航";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		539DD3B61D936FDF00FBA78A /* Model */ = {
@@ -960,6 +988,7 @@
 				539DD3BD1D93738E00FBA78A /* Model */,
 			);
 			name = "tripmanagement行程管理";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		539DD3BD1D93738E00FBA78A /* Model */ = {
@@ -1038,6 +1067,7 @@
 				53ACB3A81D954643005C9A61 /* Model */,
 			);
 			name = "Qrcode二维码";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53ACB3A81D954643005C9A61 /* Model */ = {
@@ -1071,6 +1101,7 @@
 				53ACB3AF1D960F30005C9A61 /* Model */,
 			);
 			name = "writeimpress写印象";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53ACB3AF1D960F30005C9A61 /* Model */ = {
@@ -1104,6 +1135,7 @@
 				53E206EF1D9A598800F1F3DA /* Model */,
 			);
 			name = "set设置";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53E206EF1D9A598800F1F3DA /* Model */ = {
@@ -1137,6 +1169,7 @@
 				53E207151D9B920300F1F3DA /* Model */,
 			);
 			name = "login登陆";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53E207151D9B920300F1F3DA /* Model */ = {
@@ -1170,6 +1203,7 @@
 				53E207191D9B922000F1F3DA /* Model */,
 			);
 			name = "loginup注册";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		53E207191D9B922000F1F3DA /* Model */ = {
@@ -1236,6 +1270,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 3637W6NRU9;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1288,6 +1323,7 @@
 				538E2DB91D87A53800FC55AF /* FMDatabaseAdditions.m in Sources */,
 				530B97D91D806C640074454C /* impressionViewController.m in Sources */,
 				53ACB3A11D9525F5005C9A61 /* impressTableViewCell.m in Sources */,
+				531677231D9DF51E00D0494B /* HttpTool.m in Sources */,
 				538E2DBF1D87A53800FC55AF /* MBProgressHUD.m in Sources */,
 				53E206ED1D9A1AFD00F1F3DA /* myinfoTableViewCell.m in Sources */,
 				538E2DC81D87FC5000FC55AF /* friendViewController.m in Sources */,
@@ -1336,6 +1372,7 @@
 				530B97BB1D8060110074454C /* ViewController.m in Sources */,
 				538E2D971D87A4F900FC55AF /* NSData+ImageContentType.m in Sources */,
 				530B97B81D8060110074454C /* AppDelegate.mm in Sources */,
+				531677201D9DF1B900D0494B /* APIClient.m in Sources */,
 				53763D581D927DF200A5C804 /* imagecollectionViewController.m in Sources */,
 				538E2D921D87A4F900FC55AF /* NSArray+MASAdditions.m in Sources */,
 				53E207211D9B925C00F1F3DA /* loginupViewController.m in Sources */,
@@ -1415,6 +1452,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 1499370499@qq.com (L62H3XZKD6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1462,6 +1500,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 1499370499@qq.com (L62H3XZKD6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1488,7 +1527,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 1499370499@qq.com (L62H3XZKD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3637W6NRU9;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SMS_SDK",
@@ -1497,12 +1539,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newtravel/PrefixHeader.pch/";
 				INFOPLIST_FILE = newtravel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjungang.newtravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "newtravel-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1511,7 +1555,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 1499370499@qq.com (L62H3XZKD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3637W6NRU9;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SMS_SDK",
@@ -1520,11 +1567,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newtravel/PrefixHeader.pch/";
 				INFOPLIST_FILE = newtravel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjungang.newtravel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "newtravel-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -56,6 +56,7 @@
 {
     [self addNSTimer];
 }
+
 #pragma mark - 定时器
 - (void)addNSTimer
 {

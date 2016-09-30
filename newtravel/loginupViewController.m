@@ -15,7 +15,11 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+XMG.h"
+#import "HttpTool.h"
 @interface loginupViewController ()<UITextFieldDelegate>
+{
+    MBProgressHUD *HUD;
+}
 @property (nonatomic,strong) UIImageView *bgimageview;
 @property (nonatomic,strong) UIButton *backbtn;
 @property (nonatomic,strong) UIButton *logupbtn;
@@ -250,6 +254,58 @@
         
         if (!error) {
             [MBProgressHUD showSuccess:@"验证成功"];
+            
+            NSString *mobilestr = [[NSString alloc] init];
+            NSString *passstr = [[NSString alloc] init];
+            
+            mobilestr = self.numberView.numbertext.text;
+            passstr = self.passview1.passwordtext1.text;
+            
+            
+            
+            NSDictionary *para=@{@"user_mobile":mobilestr,@"user_pwd":passstr};
+            
+            [HttpTool postWithparamsWithURL:@"User/UserSignup" andParam:para success:^(id responseObject) {
+                NSData *data = [[NSData alloc] initWithData:responseObject];
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"%@",dic);
+                NSString *code=dic[@"code"];
+                
+                if ([code isEqualToString:@"200"])
+                {
+                    NSLog(@"用户已经存在");
+                    //手机震动
+                    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                    [MBProgressHUD showError:@"用户已经存在"];
+                }else
+                {
+                    [self dismissViewControllerAnimated:YES completion:^{
+                        //这里进行信息的注册
+                        
+                    }];
+                    NSLog(@"成功");
+                }
+                
+                
+            } failure:^(NSError *error) {
+                NSLog(@"%@",error);
+                //手机震动
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                HUD = [[MBProgressHUD alloc] initWithView:self.view];
+                HUD.labelText = @"请检查网络设置";
+                [self.view addSubview:HUD];
+                HUD.mode = MBProgressHUDModeCustomView;
+                HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark"]];
+                [HUD showAnimated:YES whileExecutingBlock:^{
+                    sleep(2);
+                } completionBlock:^{
+                    [HUD removeFromSuperViewOnHide];
+                }];
+                
+            }];
+           
+            
+            
             
         }else{
             NSLog(@"验证失败:%@",error);

@@ -280,7 +280,7 @@ static NSString *kcellname2 = @"name2";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([_showDic objectForKey:[NSString stringWithFormat:@"%ld",indexPath.section]]) {
+    if ([_showDic objectForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]]) {
         return 60;
     }
     return 0;
@@ -346,7 +346,7 @@ static NSString *kcellname2 = @"name2";
         _showDic = [[NSMutableDictionary alloc]init];
     }
     
-    NSString *key = [NSString stringWithFormat:@"%ld",didSection];
+    NSString *key = [NSString stringWithFormat:@"%ld",(long)didSection];
     if (![_showDic objectForKey:key]) {
         [_showDic setObject:@"1" forKey:key];
         
@@ -361,28 +361,19 @@ static NSString *kcellname2 = @"name2";
 //是否允许编辑行，默认是YES
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-
 {
-    
     return YES;
-    
 }
 //修改删除按钮为中文的删除
 
 -(NSString*)tableView:(UITableView*)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath*)indexPath
-
 {
-    
     return@"删除";
-    
 }
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
-
 {
-    
     // 添加一个删除按钮
-    
     UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         
         NSLog(@"点击了删除");
@@ -391,17 +382,18 @@ static NSString *kcellname2 = @"name2";
         rankingTableViewCell *cell2 = [[rankingTableViewCell alloc] init];
         
         if (indexPath.section==0) {
-            cell=[self.friendtableview cellForRowAtIndexPath:indexPath];
-            
-            [self.friendtableview reloadData];
+      
             // 2. 更新UI
             [_friendarray removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            cell=[self.friendtableview cellForRowAtIndexPath:indexPath];
+            
+//            [self.friendtableview reloadData];
         }
         if (indexPath.section==1) {
             cell2=[self.friendtableview cellForRowAtIndexPath:indexPath];
             
-            [self.friendtableview reloadData];
+//            [self.friendtableview reloadData];
             // 2. 更新UI
             [_rankingarray removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];

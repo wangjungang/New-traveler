@@ -296,7 +296,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView==self.traveltableView) {
-        if ([_showDic objectForKey:[NSString stringWithFormat:@"%ld",indexPath.section]]) {
+        if ([_showDic objectForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]]) {
             return 44;
         }
         return 0;
@@ -364,7 +364,7 @@
         _showDic = [[NSMutableDictionary alloc]init];
     }
     
-    NSString *key = [NSString stringWithFormat:@"%ld",didSection];
+    NSString *key = [NSString stringWithFormat:@"%ld",(long)didSection];
     if (![_showDic objectForKey:key]) {
         [_showDic setObject:@"1" forKey:key];
         
